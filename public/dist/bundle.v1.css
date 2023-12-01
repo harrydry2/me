@@ -1,0 +1,58 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/styles.sass ***!
+  \***************************************************************************************************************/
+html, body {
+  color: black;
+}
+
+@font-face {
+  font-family: "AvenirNext";
+  src: url(f33947353d78e5d89252.woff2) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(d732b4eeccf39c98116f.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(a92c9afd7e9d034847cf.woff2) format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(cb89cd6ed7ca6dec46b1.woff2) format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(e373fe10c8e0e123e6d7.woff2) format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(a203c98f95390907fb14.woff2) format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url(ff34206e21903acae69c.woff2) format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url(a2983dbb6f1bc619a091.woff2) format("woff2");
+  font-weight: 500;
+}
+html, body {
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-family: "AvenirNext";
+}

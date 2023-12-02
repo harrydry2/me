@@ -1,0 +1,66 @@
+include ./card
+include ./filters
+include ./mobfilters
+//- include ./ph
+
+mixin home(cards, title, activeFilters, filters, titlenum, displaynone = "")
+  .home(class=`${displaynone}`)
+    //- +phBase()
+    .cegm__top.cegm__top-ph
+      a(href="/inspiration")
+        //- img(src="https://ik.imagekit.io/o08ysq9vx/cebits/cegLogo.png", alt="Logo")
+        img(src="https://ik.imagekit.io/o08ysq9vx/mebits/q1.png", alt="Logo")
+      .cegm__top-right
+        .cegm__top-right-minus!=icon("cegfilterminus3")
+        .cegm__top-right-plus.cegmtr__active!=icon("cegfilterplus1")
+        .cegm__top-right-menu.cegmtr__active!=icon("cegmail1")
+        .cegm__top-right-menuminus!=icon("cegmail3a")
+    .home__left
+      //- a.home__left-logo(href="/")!=icon("meLogoBig")
+      //- img(src="https://ik.imagekit.io/o08ysq9vx/mebits/me1a.png", alt="Logo" class="home__left-logo")
+      //- img(src="https://ik.imagekit.io/o08ysq9vx/mebits/ceg1c.png", alt="Logo" class="home__left-logo")
+      //- img(src="https://ik.imagekit.io/o08ysq9vx/mebits/logo1.png", alt="Logo" class="home__left-logo")
+      a(href="/")
+        img(src="https://ik.imagekit.io/o08ysq9vx/mebits/q1.png", alt="Logo" class="home__left-logo")
+      +filters(activeFilters, titlenum)
+    .home__right
+      .home__right-header
+        a.home__right-header-wrap-logoSmall(href="/")!=icon("gmLogoSmall")
+        .ceTop__left
+          //- img(src="https://ik.imagekit.io/o08ysq9vx/lc/topbar4.svg" alt="Logo" class="topbar")
+          //- .ceTop-mail
+          //-   .ceTop-mail-left
+          //-     .ceTop-mail-left-icon!=icon("mail")
+          //-     input(type="text" placeholder="Get 6 new tips in your inbox every Monday").nh2
+          //-   .nh1.cmtGlitch Yes Please :)
+          .nh3
+        .ceTop__right
+          //- a(href="https://calendly.com/harrydry/live?month=2023-03" target="_blank").ceTop__right-sign.dropout3 Work with me
+          a(href="https://docs.google.com/document/d/1Qw77TlBmqXdFBWCihSvI0S0gQaumKZK_2WS2dx8ok-I/edit?usp=sharing" target="_blank").ceTop__right-sign.dropout3 Sponsor
+          a(href="/inspiration").ceTop__right-sign.dropout3 Copywriting Examples
+          a(href="https://www.instagram.com/marketing_examples" target="_blank" class="dropout1")!=icon("instagram")
+          a(href="https://www.linkedin.com/in/harrydry/" target="_blank" class="dropout1")!=icon("linu")
+          a(href="https://twitter.com/goodmarketinghq" target="_blank" class="dropout2")!=icon("tnu")
+      .outerCard
+        .sponsor.sponsor1
+          .sponsor__inner
+            img(src="https://ik.imagekit.io/o08ysq9vx/newsletters/nl24a/sm.png", alt="SEOmonitor Logo" href="https://links.seomonitor.com/marketing-examples")
+            .sponsor__inner-p Want your SEO forecast in 5-mins? Ridiculously simple. Remarkably accurate.
+            a.sponsor__inner-button(href="https://links.seomonitor.com/marketing-examples" target="_blank") Yes please. No CC required.
+        .sponsor.sponsor2
+          .sponsor__inner
+            img(src="https://ik.imagekit.io/o08ysq9vx/newsletters/nl24a/sm.png", alt="SEOmonitor Logo" href="https://links.seomonitor.com/marketing-examples")
+            .sponsor__inner-p Run an SEO agency? We made SEOmonitor to win you pitches.
+            a.sponsor__inner-button(href="https://links.seomonitor.com/marketing-examples" target="_blank") 3-month free trial. No CC required.
+        .sponsor.sponsor3
+          .sponsor__inner
+            img(src="https://ik.imagekit.io/o08ysq9vx/newsletters/nl24a/sm.png", alt="SEOmonitor Logo" href="https://links.seomonitor.com/marketing-examples")
+            .sponsor__inner-p Farewell fudged formulas. Hasta la vista human error. Ta-ta tedious data entry.
+            a.sponsor__inner-button(href="https://links.seomonitor.com/marketing-examples" target="_blank") Join 2000 teams. Try SEOmonitor.
+        each card in cards
+          +card(card)
+      //- .outerLoader
+      //-   .loader
+    //- mobile layout
+    +mobfilters(activeFilters, titlenum)
+    //- .hm__filters

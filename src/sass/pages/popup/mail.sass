@@ -1,0 +1,367 @@
+.outerMail
+  justify-content: center
+  align-items: center
+  position: fixed
+  display: none
+  z-index: 105
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+
+
+.newmail
+  box-shadow: 0 15px 35px 0 rgba(50,50,93,0.10), 0 5px 15px 0 rgba(0,0,0,0.07)
+  background: #ffffff
+  width: 42rem
+  padding: 0rem
+  display: flex
+  position: relative
+  flex-direction: column
+  border-radius: 2px
+  height: 80%
+  overflow-y: scroll
+  @media screen and (max-width: 450px)
+    width: 100%
+    height: 100%
+  &__topLayer
+    &-bg
+      width: 100%
+    &-center
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+    &-center1
+      width: 24%
+      position: absolute
+      top: 0
+      left: 0
+  &__icon
+    position: absolute
+    top: 0px
+    right: 0px
+    padding: 1.8rem
+    cursor: pointer
+    @media screen and (max-width: 700px)
+      padding: 1.4rem
+  &__text
+    padding: 2rem 2rem 0rem 2rem
+    position: relative
+    @media screen and (max-width: 376px)
+      padding: 2rem 1.8rem 0rem 1.8rem
+    &-lh
+      line-height: 2.7rem !important
+    &-p
+      font-size: 1.7rem
+      line-height: 2.4rem
+      margin-top: 1.5rem
+      font-weight: 400
+      a
+        border-bottom: 1px solid #030212
+      span
+        font-weight: 500
+      &-listTop
+        // margin-top: 1.5rem
+        padding-left: 1rem
+      &-list
+        margin-top: 0.5rem
+        padding-left: 1rem
+      &-listBottom
+        margin-top: 0.5rem
+        padding-left: 1rem
+  &__harry
+    display: flex
+    align-items: center
+    &-p
+      font-size: 1.6rem
+      background-color: #4742DE
+      padding: 1rem
+      display: inline-flex
+      transform: rotate(-1deg)
+      color: white
+      font-weight: 500
+    img
+      margin-left: 12px
+      width: 59px
+      height: 59px
+      border-radius: 100px
+      padding: 5px
+      border: 2px solid hsla(242, 70%, 56%, .40)
+  &__test
+    overflow-y: scroll
+  &__input
+    background-color: white
+    // position: sticky
+    // top: 0
+    z-index: 4
+    width: calc(100%)
+    padding: 1rem 2rem 1rem 2rem
+    margin: .9rem 0 1.3rem 0
+    @media screen and (max-width: 376px)
+      padding: 1rem 1.8rem 1rem 1.8rem
+    &-red
+      display: none
+      font-size: 1.5rem
+      text-align: center
+      margin-top: 2.2rem
+    &-input
+      height: 5.5rem
+      display: flex
+      justify-content: space-between
+      padding: 0.6rem
+      background-color: #F1F5F8
+      input
+        width: 82%
+        background-color: #F1F5F8
+        font-size: 1.6rem
+        font-weight: 600
+        color: #030212
+        &::placeholder
+          color: #8795A1
+      &-button
+        background-color: #030212
+        color: #fff
+        font-size: 1.4rem
+        font-weight: 600
+        border: none
+        display: flex
+        align-items: center
+        border-radius: 4px
+        justify-content: center
+        width: 6.9rem
+        cursor: pointer
+  &__bc-red
+    display: none
+    font-size: 1.5rem
+    text-align: center
+    margin-top: 2.2rem
+
+.testy
+  height: 7rem
+  display: flex
+  align-items: center
+  position: relative
+  &__img
+    border-radius: 100px
+    margin-left: 1.6rem
+    width: 5.2rem
+    height: 5.2rem
+    display: flex
+    justify-content: center
+    align-items: center
+    @media screen and (max-width: 376px)
+      margin-left: 1rem
+    img
+      width: 4.2rem
+      height: 4.2rem
+      border-radius: 100px
+  &__text
+    font-size: 1.6rem
+    margin-left: 1.1rem
+    width: 32rem
+    line-height: 2rem
+    font-weight: 400
+    z-index: 2
+    @media screen and (max-width: 376px)
+      margin-left: 1rem
+      width: 27.8rem
+    @media screen and (max-width: 350px)
+      margin-left: 1rem
+      width: 22rem
+    .bold
+      font-weight: 500
+  &__num
+    font-size: 4.8rem
+    line-height: 1.4
+    position: absolute
+    letter-spacing: -5px
+    right: 2rem
+    // font-family: "ToJapan"
+    transform: translateY(-3px)
+    @media screen and (max-width: 376px)
+      right: 1.7rem
+
+
+.testy1
+  // background-color: #F2F2FD
+  background-color: #5053d7
+  img
+    border: 1px solid #2B2DBA
+  .testy__img
+    border: 1px solid #2B2DBA
+  .testy__text
+    color: white
+
+.testy2
+  // background-color: #F7CFD6
+  background-color: hsla(350, 71%, 89%, 100)
+  img
+    border: 1px solid hsla(350, 71%, 79%, 100)
+  .testy__img
+    border: 1px solid hsla(350, 71%, 79%, 100)
+  .testy__text
+    color: #030212
+
+.testy3
+  background-color: hsla(348, 79%, 64%, 100)
+  img
+    border: 1px solid hsla(348, 79%, 54%, 100)
+  .testy__img
+    border: 1px solid hsla(348, 79%, 54%, 100)
+  .testy__text
+    color: white
+
+.testy4
+  background-color: hsla(52, 96%, 78%, 100)
+  img
+    border: 1px solid hsla(52, 96%, 68%, 100)
+  .testy__img
+    border: 1px solid hsla(52, 96%, 68%, 100)
+  .testy__text
+    color: #030212
+
+.testy5
+  background-color: hsla(181, 100%, 33%, 100)
+  img
+    border: 1px solid hsla(181, 100%, 23%, 100)
+  .testy__img
+    border: 1px solid hsla(181, 100%, 23%, 100)
+  .testy__text
+    color: white
+
+.testy6
+  background-color: hsla(190, 49%, 83%, 100)
+  img
+    border: 1px solid hsla(190, 49%, 73%, 100)
+  .testy__img
+    border: 1px solid hsla(190, 49%, 73%, 100)
+  .testy__text
+    color: black
+
+
+
+
+
+
+.mail
+  // &__icon
+  //   position: absolute
+  //   top: 0px
+  //   right: 0px
+  //   padding: 3rem
+  //   cursor: pointer
+  //   @media screen and (max-width: 700px)
+  //     padding: 2rem
+  // h2
+  //   font-weight: 700
+  //   font-size: 2.7rem
+  //   color: #030212
+  //   text-align: center
+  //   line-height: 1.29
+  //   @media screen and (max-width: 700px)
+  //     font-size: 2.5rem
+  //   @media screen and (max-width: 340px)
+  //     font-size: 2.3rem
+  // &__small
+  //   font-size: 1.3rem
+  //   color: #030212
+  //   text-align: center
+  //   margin-top: 1.4rem
+  //   font-weight: 600
+  // &__tickouter
+  //   display: inline-flex
+  //   flex-direction: column
+  //   margin: 5rem auto 0 auto
+  // &__bc
+  //   width: 32.8rem
+  //   margin: 5rem auto 0 auto
+  //   @media screen and (max-width: 768px)
+  //     width: 100%
+  &__bc-red
+    display: none
+    font-size: 1.4rem
+    text-align: center
+    margin-top: 2rem
+  &__input
+    background: #F1F5F8
+    margin-right: 6rem
+    border-radius: 4px
+    display: flex
+    align-items: center
+    position: relative
+    width: 100%
+    flex: 1
+    &-icon
+      position: absolute
+      left: 1.8rem
+      transform: translateY(1px)
+    input
+      background: #F1F5F8
+      padding: 1.8rem 2rem 1.8rem 5.4rem
+      width: 100%
+      font-weight: 500
+      font-size: 1.6rem
+      color: #030212
+      &::placeholder
+        color: #8795A1
+  &__button
+    height: 5.6rem
+    background: #4742DE
+    width: 100%
+    font-size: 1.6rem
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #ffffff
+    font-weight: 600
+    margin-top: 2rem
+    cursor: pointer
+    transition: all 0.3s
+    &:hover
+      opacity: 0.9
+      transition: all 0.3s
+
+// .tick
+//   display: flex
+//   align-items: center
+//   margin-top: 1.5rem
+//   &:first-child
+//     margin-top: 0
+//   &__icon
+//     transform: translateY(1px)
+//   &__text
+//     font-size: 1.6rem
+//     margin-left: 1.4rem
+
+// .mailO
+//   font-size: 1.4rem
+//   text-align: center
+//   margin-top: 2.2rem
+//   color: grey
+//   font-weight: 500
+//   span
+//     color: #81409b
+//   @media screen and (max-width: 700px)
+//     font-size: 1.3rem
+//     margin-top: 2rem
+
+// append to every page
+
+.addOnEmail, .postEmail
+  width: 32.8rem
+  margin: 5rem auto 6.4rem auto
+  &__header
+    .bold
+      font-weight: 600
+  @media screen and (max-width: 424px)
+    width: 100%
+    padding: 0 2rem
+
+.postEmail
+  &__header
+    font-size: 1.5rem
+    margin-bottom: 3rem
+    text-align: center
+    line-height: 1.4

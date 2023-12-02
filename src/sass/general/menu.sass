@@ -1,0 +1,37 @@
+.menu
+  position: sticky
+  top: 0
+  display: flex
+  height: 6.6rem
+  width: 100%
+  border-bottom: 1px solid #e1e1e1
+  background: #ffffff
+  z-index: 2
+  &__twitter
+    margin-left: 1.6rem
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 80rem
+    // width: 103.6rem
+    margin: 0 auto
+    @media screen and (max-width: 768px)
+      padding: 0 1.8rem
+      width: 100%
+    &-right
+      display: flex
+      align-items: center
+      &-text
+        font-size: 1.5rem
+        font-weight: 600
+        color: #4742DE
+  &__logo
+    display: block
+    @media screen and (max-width: 768px)
+      display: none
+  &__logoSmall
+    display: none
+    @media screen and (max-width: 768px)
+      display: block
+      // margin-right: 1.8rem

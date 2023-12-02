@@ -1,0 +1,1020 @@
+// stars shit
+
+$starwidthvalue: calc((1800 - 1480) / 2 )
+
+// card colors
+
+$cegy1: hsla(0, 100%, 61%, .68)
+$cegy2: hsla(156, 70%, 59%, .70)
+$cegy3: hsla(234, 100%, 54%, .94)
+$cegy4: hsla(310, 80%, 51%, .78)
+$cegy5: hsla(56, 100%, 55%, .7)
+$cegy6: hsla(193, 100%, 52%, .78)
+// $cegy3: hsla(236, 100, 61, .54)
+
+// filter color
+
+$cegs1: hsla(0, 100%, 61%, .30)
+$cegs2: hsla(156, 70%, 59%, .38)
+$cegs3: hsla(234, 100%, 54%, .26)
+$cegs4: hsla(310, 80%, 51%, .26)
+$cegs5: hsla(56, 100%, 55%, .34)
+$cegs6: hsla(193, 100%, 52%, .27)
+
+// filter hover
+
+$ceg1h: hsla(0, 100%, 61%, .38)
+$ceg2h: hsla(156, 70%, 59%, .47)
+$ceg3h: hsla(234, 100%, 54%, .34)
+$ceg4h: hsla(310, 80%, 51%, .32)
+$ceg5h: hsla(56, 100%, 55%, .40)
+$ceg6h: hsla(193, 100%, 52%, .35)
+
+// filter click
+
+$cegcl1: hsla(0, 100%, 61%, .75)
+$cegcl2: hsla(156, 70%, 59%, .9)
+$cegcl3: hsla(234, 100%, 54%, .75)
+$cegcl4: hsla(310, 80%, 51%, .75)
+$cegcl5: hsla(56, 95%, 55%, 1)
+$cegcl6: hsla(193, 100%, 52%, .90)
+
+@function multiple-box-shadow ($n)
+  $value: '#{random(100)}vh #{random(100)}vh #FFF'
+  @for $i from 2 through $n
+    $value: '#{$value} , #{random($starwidthvalue)}px #{random(100)}vh #FFF'
+  @return unquote($value)
+
+.fed__outer
+  display: flex
+  justify-content: center
+  &-side
+    width: calc((100vw - 1480px) / 2 )
+    margin: 0 auto
+    height: 100%
+    overflow: hidden
+    position: fixed
+    z-index: 5
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+    @media (max-width: 1480px)
+      display: none
+    &__on
+      width: calc((100vw - 1280px) / 2 )
+      @media (max-width: 1480px)
+        display: block
+      @media (max-width: 1280px)
+        display: none
+    &-right
+      right: 0
+    &-left
+      left: 0
+      transform: rotateY(180deg)
+
+.fed
+  width: 148rem
+  margin: 0 auto
+  &__on
+    width: 128rem
+    // transition: width 0.4s
+
+$shadows-small-left: multiple-box-shadow(100)
+$shadows-medium-left: multiple-box-shadow(20)
+$shadows-small-right: multiple-box-shadow(100)
+$shadows-medium-right: multiple-box-shadow(20)
+
+.stars-left
+  box-shadow: $shadows-small-left
+  &:after
+    box-shadow: $shadows-small-left
+
+.stars2-left
+  box-shadow: $shadows-medium-left
+  &:after
+    box-shadow: $shadows-medium-left
+
+.stars-right
+  box-shadow: $shadows-small-right
+  &:after
+    box-shadow: $shadows-small-right
+
+.stars2-right
+  box-shadow: $shadows-medium-right
+  &:after
+    box-shadow: $shadows-medium-right
+
+#stars
+  width: 1px
+  height: 1px
+  background: transparent
+  animation: animStar 100s linear infinite
+  position: absolute
+  &:after
+    content: ""
+    position: absolute
+    top: 100vh
+    width: 1px
+    height: 1px
+    background: transparent
+
+#stars2
+  width: 2px
+  height: 2px
+  background: transparent
+  animation: animStar 100s linear infinite
+  position: absolute
+  &:after
+    content: ""
+    position: absolute
+    top: 100vh
+    width: 2px
+    height: 2px
+    background: transparent
+
+@keyframes animStar
+  from
+    transform: translateY(-100vh)
+  to
+    transform: translateY(0px)
+
+.ceg
+  display: flex
+  justify-content: space-between
+  @media (max-width: 1026px)
+    display: block
+
+.cegm
+  &__top
+    justify-content: space-between
+    border-bottom: 3px solid hsla(0, 0%, 97%, 1)
+    padding: 1rem 1.2rem 1rem 1.2rem
+    align-items: center
+    position: fixed
+    width: 100%
+    background-color: white
+    z-index: 101
+    display: none
+    @media (max-width: 1026px)
+      display: flex
+    // &-ph
+    //   margin-top: 5rem
+    &-ph
+      margin-top: 0rem
+    img
+      height: 3.6rem
+    &-right
+      display: flex
+      align-items: center
+      &-menu
+        padding: 0.5rem
+        display: none
+      &-menuminus
+        padding: 0.5rem
+        display: none
+      &-plus
+        padding: 0.5rem
+        display: none
+      &-minus
+        padding: 0.5rem
+        display: none
+  &__notice
+    display: none
+    text-align: center
+    font-weight: 500
+    color: #090A0F
+    font-size: 1.6rem
+    margin-top: 8.6rem
+    // margin-top: 13.6rem
+    @media (max-width: 1026px)
+      display: block
+  &__bottom
+    background-color: #fff
+    z-index: 103
+    position: fixed
+    bottom: 0
+    display: none
+    width: 100%
+    &-sep
+      height: 4rem
+      background-color: #fafafa
+      width: 100%
+    &-inner
+      width: 100%
+      background-color: #ffffff
+      display: flex
+      flex-wrap: wrap
+      padding: 2.1rem 0rem 1.1rem 0rem
+      position: relative
+    &-title
+      position: absolute
+      left: 0
+      top: 0
+      transform: translateY(-50%)
+      height: 2.7rem
+      padding: .7rem 1rem .7rem .9rem
+      display: inline-block
+      margin: 0 auto
+      background-color: #090A0F
+    &-ns
+      position: absolute
+      left: 0
+      top: 0
+      transform: translateY(-50%)
+      display: inline-block
+      margin: 0 auto
+      height: 2.8rem
+      background-color: #090A0F
+      font-size: 1.4rem
+      color: white
+      display: flex
+      align-items: center
+      letter-spacing: 0.1px
+      line-height: 0
+      &-padding
+        padding: 0 1.1rem
+    &-tab
+      padding: 0.7rem 1rem
+      font-size: 1.5rem
+      display: inline-block
+      border: 2px solid #f7f7f7
+      cursor: pointer
+      color: #212121
+      transition: all 0.4s ease
+      margin-top: 1rem
+      margin-left: .9rem
+      font-weight: 500
+
+.cegmtr__active
+  display: block
+
+.cegl
+  height: 100%
+  width: 19.7rem
+  background-color: white
+  height: 100vh
+  position: fixed
+  // width: 25rem
+  overflow-y: scroll
+  -ms-overflow-style: none
+  scrollbar-width: none
+  // margin-top: 5.4rem
+  &::-webkit-scrollbar
+    display: none
+  @media (max-width: 1026px)
+    display: none
+  &__on
+    display: none
+  &__logo
+    // padding: 2.4rem 0 0 0
+    height: 4.05rem
+    margin-top: 2rem
+    display: flex
+    position: absolute
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+  &__filter
+    width: 19.7rem
+    background-color: #ffffff
+    display: flex
+    position: relative
+    flex-wrap: wrap
+    margin-top: 3.6rem
+    padding: 1.6rem 0rem 1.4rem 0.1rem
+    border-radius: 2rem
+    border: 3px solid hsla(0, 0%, 97%, 1)
+    border-left: 0rem
+    &-one
+      margin-top: 9.2rem
+    @media (max-width: 1320px)
+      width: 18.8rem
+    &-three
+      width: 13.7rem
+      @media (max-width: 1320px)
+        width: 13.2rem
+    &-title
+      position: absolute
+      left: 0
+      top: 0
+      transform: translateY(-56%)
+      padding: .7rem 1rem
+      display: inline-block
+      margin: 0 auto
+      background-color: #090A0F
+    &-tab
+      padding: 0.7rem 1rem
+      font-size: 1.5rem
+      display: inline-block
+      border: 2px solid hsla(0, 0%, 97%, 1)
+      cursor: pointer
+      color: #090A0F
+      transition: all 0.4s ease
+      font-family: Avenir
+      margin-top: 1rem
+      margin-left: .9rem
+      font-weight: 500
+      @media (max-width: 1320px)
+        font-size: 1.4rem
+        margin-top: .9rem
+        margin-left: .8rem
+
+.cegtagSVG1
+  transform: translateY(2px)
+  width: 3.5rem
+  @media (max-width: 1026px)
+    width: 3.5rem
+    // transform: translateY(.5px)
+
+.cegtagSVG2
+  transform: translateY(1px)
+  width: 4.2rem
+  @media (max-width: 1026px)
+    // width: 4.1rem
+    transform: translateY(.7px)
+
+.cegtagSVG3
+  transform: translateY(1px)
+  // width: 4rem
+  @media (max-width: 1026px)
+    // width: 4rem
+    transform: translateY(.7px)
+
+.cegtagSVG4
+  transform: translateY(1px)
+  width: 6.2rem
+  // width: 4rem
+  @media (max-width: 1026px)
+    // width: 4rem
+    transform: translateY(.7px)
+
+.cegtagSVG6
+  transform: translateY(1px)
+  width: 4.5rem
+  // width: 4rem
+  @media (max-width: 1026px)
+    // width: 4rem
+    transform: translateY(.7px)
+
+.cegtagSVG8
+  transform: translateY(1px)
+  width: 7.4rem
+  // width: 4rem
+  @media (max-width: 1026px)
+    // width: 4rem
+    transform: translateY(.7px)
+
+.cegtagSVG9
+  transform: translateY(1px)
+  width: 4rem
+  @media (max-width: 1026px)
+    transform: translateY(.7px)
+
+.cegtagSVG10
+  transform: translateY(1px)
+  width: 6.1rem
+  @media (max-width: 1026px)
+    transform: translateY(.7px)
+
+.ceRight
+  width: calc(100% - #{19.7rem})
+  margin-left: 19.7rem
+  padding: 0 1.5rem 0rem 1.5rem
+  // margin-top: 5.4rem
+  // background: white
+  // margin-bottom: 1.6rem
+  position: relative
+  @media (max-width: 1320px)
+    width: calc(100% - #{18.8rem})
+    margin-left: 18.8rem
+    padding: 0 1.4rem 1.6rem 1.4rem
+  @media (max-width: 940px)
+    padding: 0 1.5rem 0rem 1.5rem
+    margin-top: 0rem
+  &__on
+    margin-left: 0rem
+    width: calc(100%)
+    // transition: width 0.4s
+    @media (max-width: 1320px)
+      width: calc(100%)
+      margin-left: 0rem
+      padding: 0 1.4rem 1.6rem 1.4rem
+  @media (max-width: 1026px)
+    margin-left: 0rem
+    width: calc(100%)
+    padding: 1.4rem
+  @media (max-width: 500px)
+    padding: 1.9rem 0rem
+
+
+.topbar
+  transform: scale(1.01) translate(3px,0px)
+  @media (max-width: 1080px)
+    transform: scale(1) translate(0px,0px)
+  @media (max-width: 1024px)
+    display: none
+
+.dropout1
+  @media (max-width: 1330px)
+    display: none
+
+.dropout2
+  @media (max-width: 1240px)
+    display: none
+  @media (max-width: 1200px)
+    display: block
+  @media (max-width: 1050px)
+    display: none
+
+.dropout3
+  @media (max-width: 1200px)
+    display: none
+
+
+.ceTop
+  height: 9.2rem
+  background-color: white
+  display: flex
+  align-items: center
+  justify-content: space-between
+  z-index: 4
+  top: 0
+  @media (max-width: 1026px)
+    display: none
+  &__left
+    display: flex
+    align-items: center
+  &-mail
+    width: 52rem
+    margin: 0 auto
+    background-color: white
+    height: 5.8rem
+    display: flex
+    justify-content: space-between
+    padding: 0.8rem 0.8rem 0.8rem 1.7rem
+    border-radius: 2rem
+    border: 3px solid hsla(0, 0%, 97%, 1)
+    &-left
+      display: flex
+      justify-content: flex-start
+      &-icon
+        display: flex
+        align-items: center
+      input
+        // background-color: #F1F5F8
+        margin-left: 1.2rem
+        font-size: 1.5rem
+        font-weight: 500
+        width: 34rem
+        color: #8795A1
+  &__right
+    display: flex
+    align-items: center
+    height: 5rem
+    padding-right: 0.8rem
+    &-sign
+      font-size: 1.55rem !important
+      font-weight: 500 !important
+      font-style: italic !important
+      // transform: rotateZ(-1deg) !important
+      margin-right: .2rem !important
+      text-transform: none !important
+    img
+      width: 3.2rem
+      transform: rotateZ(387deg)
+    a
+      margin-left: 1.4rem
+      font-size: 1.5rem
+      text-transform: uppercase
+      font-weight: 600
+      // color: #4742DE
+      & > *
+        fill: #090A0F !important
+
+.nh3
+  margin-left: 1rem
+  font-size: 1.4rem
+
+.fedgrid
+  display: grid
+  // grid-gap: 1.6rem
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr))
+  grid-auto-rows: 1rem
+  grid-auto-flow: row
+  opacity: 0
+  // @media (max-width: 1026px)
+  //   grid-gap: 1.5rem
+
+.cegio
+  width: calc((100% - 30px) / 3)
+  margin-bottom: 1.6rem
+  transition: all 0.2s
+  &__notyetloaded
+    opacity: 0
+    transition: all 0.2s
+  @media (max-width: 1320px)
+    width: calc((100% - 28px) / 3)
+    margin-bottom: 1.4rem
+  @media (max-width: 940px)
+    width: calc((100% - 15px) / 2)
+  @media (max-width: 600px)
+    width: calc(100%)
+    margin-bottom: 1.5rem
+
+.cmtGlitch
+  border-radius: 4px
+  background-color: #090A0F
+  border: none
+  color: #fff
+  padding: 0 1rem
+  font-size: 1.4rem
+  font-weight: 600
+  font-family: "AvenirNext"
+  cursor: pointer
+  align-items: center
+  display: flex
+
+
+.cegi
+  position: relative
+  cursor: pointer
+  overflow: hidden
+  @media (min-width: 1026px)
+    &:hover
+      .cegi__left
+        transform: translateX(0rem)
+        transition: all 0.4s ease
+      .cegi__right
+        // transform: translateX(0rem)
+        transition: all 0.4s ease
+        opacity: 1
+      .cegi__center
+        transition: all 0.4s ease
+        opacity: 1
+      p
+        margin-top: 0rem
+      img
+        filter: blur(2px)
+        transition: all 0.4s ease
+  &__left
+    position: absolute
+    bottom: 0
+    left: 0
+    transform: translateX(-100%)
+    background: hsla(0, 0%, 97%, 1)
+    padding: 1rem 1rem .7rem .7rem
+    border-top-right-radius: 100px
+    transition: all 0.4s ease
+    z-index: 3
+    @media (max-width: 1320px)
+      padding: .95rem .9rem .65rem .6rem
+    @media (max-width: 1026px)
+      padding: 1rem 1rem .7rem .7rem
+    @media (max-width: 380px)
+      padding: .95rem .9rem .65rem .6rem
+  &__right
+    // background: hsla(0, 0%, 97%, 1)
+    right: 0
+    bottom: 0
+    position: absolute
+    padding: 0.5rem 1.1rem
+    display: flex
+    transform: translateX(0%)
+    transition: all 0.4s ease
+    opacity: 0
+    z-index: 3
+    @media (max-width: 600px)
+      padding: 0.6rem 0.7rem
+    // display: none
+    p
+      color: white
+      transform: rotate(-1deg)
+      font-size: 1.4rem
+      font-style: italic
+    &-pill
+      padding: 0.6rem 0.8rem
+      font-size: 1.4rem
+      display: flex
+      justify-content: center
+      // font-weight: 400
+      border-radius: 20px
+      @media (max-width: 1320px)
+        font-size: 1.35rem
+        padding: 0.55rem 0.7rem
+      @media (max-width: 1026px)
+        padding: 0.6rem 0.8rem
+        font-size: 1.4rem
+      @media (max-width: 380px)
+        font-size: 1.35rem
+        padding: 0.55rem 0.7rem
+      &:not(:last-child)
+        margin-right: 0.4rem
+  &__center
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    width: 100%
+    height: 100%
+    opacity: 0
+    padding: 1.8rem 1.8rem
+    background-color: hsla(0,0%,0%,.86)
+    // font-style: italic
+    font-size: 1.6rem
+    line-height: 1.4
+    text-align: center
+    color: white
+    border-radius: 2rem
+    transition: all 0.4s ease
+    z-index: 3
+    border: 3px solid hsla(0, 0%, 97%, 1)
+    font-weight: 500
+    @media (max-width: 1280px)
+      font-size: 1.5rem
+    @media (max-width: 940px)
+      font-size: 1.6rem
+    @media (max-width: 500px)
+      border-left: none
+      border-right: none
+      border-radius: 0
+    @media (max-width: 380px)
+      font-size: 1.5rem
+    &-inner
+      p
+        font-size: .5rem
+        @media (max-width: 1280px)
+          font-size: .4rem
+        @media (max-width: 940px)
+          font-size: .5rem
+        @media (max-width: 380px)
+          font-size: .4rem
+      .ptitle
+        font-size: .7rem !important
+        @media (max-width: 1280px)
+          font-size: .6rem !important
+        @media (max-width: 940px)
+          font-size: .7rem !important
+        @media (max-width: 380px)
+          font-size: .6rem !important
+  &__img
+    border-radius: 2rem
+    border: 3px solid hsla(0, 0%, 97%, 1)
+    overflow: hidden
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    display: grid
+    align-items: start
+    @media (max-width: 500px)
+      border-left: none
+      border-right: none
+      border-radius: 0rem
+    &-wrapper
+      display: flex
+      width: 100%
+      height: 100%
+  img
+    width: 100%
+    height: 100%
+    object-fit: fill
+    // will-change: opacity
+    opacity: 0
+    transition: all .3s linear
+
+.fed__loaded
+  opacity: 1 !important
+  transition: all .3s linear
+
+.cegimobtap
+  .cegi__left
+    transform: translateX(0rem)
+    transition: all 0.4s ease
+  .cegi__right
+    transform: translateX(0rem)
+    transition: all 0.4s ease
+    opacity: 1
+  .cegi__center
+    transition: all 0.4s ease
+    opacity: 1
+  .cegi__img
+    img
+      filter: blur(2px)
+      transition: all 0.4s ease
+
+.cegi-shade1
+  background: $cegs1
+  &:hover
+    background: $ceg1h
+    transition: all 0.4s
+
+.cegi-shade2
+  background: $cegs2
+  &:hover
+    background: $ceg2h
+    transition: all 0.4s
+
+.cegi-shade3
+  background: $cegs3
+  &:hover
+    background: $ceg3h
+    transition: all 0.4s
+
+.cegi-shade4
+  background: $cegs4
+  &:hover
+    background: $ceg4h
+    transition: all 0.4s
+
+.cegi-shade5
+  background: $cegs5
+  &:hover
+    background: $ceg5h
+    transition: all 0.4s
+
+.cegi-shade6
+  background: $cegs6
+  &:hover
+    background: $ceg6h
+    transition: all 0.4s
+
+.cegi-shade7
+  background: $cegs1
+  &:hover
+    background: $ceg1h
+    transition: all 0.4s
+
+.cegi-shade8
+  background: $cegs2
+  &:hover
+    background: $ceg2h
+    transition: all 0.4s
+
+.cegi-shade9
+  background: $cegs3
+  &:hover
+    background: $ceg3h
+    transition: all 0.4s
+
+.cegi-shade10
+  background: $cegs4
+  &:hover
+    background: $ceg4h
+    transition: all 0.4s
+
+.cegi-shade11
+  background: $cegs5
+  &:hover
+    background: $ceg5h
+    transition: all 0.4s
+
+.cegi-shade12
+  background: $cegs6
+  &:hover
+    background: $ceg6h
+    transition: all 0.4s
+
+.cegi-shade13
+  background: $cegs1
+  &:hover
+    background: $ceg1h
+    transition: all 0.4s
+
+.cegi-shade14
+  background: $cegs2
+  &:hover
+    background: $ceg2h
+    transition: all 0.4s
+
+
+.cegfilters__active1
+  .cegi-shade1
+    border: 2px solid $cegcl1
+
+.cegfilters__active2
+  .cegi-shade2
+    border: 2px solid $cegcl2
+
+.cegfilters__active3
+  .cegi-shade3
+    border: 2px solid $cegcl3
+
+.cegfilters__active4
+  .cegi-shade4
+    border: 2px solid $cegcl4
+
+.cegfilters__active5
+  .cegi-shade5
+    border: 2px solid $cegcl5
+
+.cegfilters__active6
+  .cegi-shade6
+    border: 2px solid $cegcl6
+
+.cegfilters__active7
+  .cegi-shade7
+    border: 2px solid $cegcl1
+
+.cegfilters__active8
+  .cegi-shade8
+    border: 2px solid $cegcl2
+
+.cegfilters__active9
+  .cegi-shade9
+    border: 2px solid $cegcl3
+
+.cegfilters__active10
+  .cegi-shade10
+    border: 2px solid $cegcl4
+
+.cegfilters__active11
+  .cegi-shade11
+    border: 2px solid $cegcl5
+
+.cegfilters__active12
+  .cegi-shade12
+    border: 2px solid $cegcl6
+
+.cegfilters__active13
+  .cegi-shade13
+    border: 2px solid $cegcl1
+
+.cegfilters__active14
+  .cegi-shade14
+    border: 2px solid $cegcl2
+
+.cegx1
+  // background: $cegy1
+  line-height: 2rem
+  display: inline-flex
+  background: linear-gradient(180deg, rgba(0,0,0,0) 71%, $cegy1 71%, $cegy1 97%, rgba(0,0,0,0) 97%)
+  height: 1.9rem
+  @media (max-width: 414px)
+    background: linear-gradient(180deg, rgba(0,0,0,0) 72%, $cegy1 72%, $cegy1 94%, rgba(0,0,0,0) 94%)
+
+.cegx2
+  // background: $cegy2
+  line-height: 2rem
+  display: inline-flex
+  background: linear-gradient(180deg, rgba(0,0,0,0) 71%, $cegy2 71%, $cegy2 97%, rgba(0,0,0,0) 97%)
+  height: 1.9rem
+  @media (max-width: 414px)
+    background: linear-gradient(180deg, rgba(0,0,0,0) 72%, $cegy2 72%, $cegy2 94%, rgba(0,0,0,0) 94%)
+
+.cegx3
+  // background: $cegy3
+  line-height: 2rem
+  display: inline-flex
+  background: linear-gradient(180deg, rgba(0,0,0,0) 71%, $cegy3 71%, $cegy3 97%, rgba(0,0,0,0) 97%)
+  height: 1.9rem
+  @media (max-width: 414px)
+    background: linear-gradient(180deg, rgba(0,0,0,0) 72%, $cegy3 72%, $cegy3 94%, rgba(0,0,0,0) 94%)
+
+.cegx4
+  // background: $cegy4
+  line-height: 2rem
+  display: inline-flex
+  background: linear-gradient(180deg, rgba(0,0,0,0) 71%, $cegy4 71%, $cegy4 97%, rgba(0,0,0,0) 97%)
+  height: 1.9rem
+  @media (max-width: 414px)
+    background: linear-gradient(180deg, rgba(0,0,0,0) 72%, $cegy4 72%, $cegy4 94%, rgba(0,0,0,0) 94%)
+
+.cegx5
+  // background: $cegy5
+  line-height: 2rem
+  display: inline-flex
+  background: linear-gradient(180deg, rgba(0,0,0,0) 71%, $cegy5 71%, $cegy5 97%, rgba(0,0,0,0) 97%)
+  height: 1.9rem
+  @media (max-width: 414px)
+    background: linear-gradient(180deg, rgba(0,0,0,0) 72%, $cegy5 72%, $cegy5 94%, rgba(0,0,0,0) 94%)
+
+.cegx6
+  // background: $cegy6
+  line-height: 2rem
+  display: inline-flex
+  background: linear-gradient(180deg, rgba(0,0,0,0) 71%, $cegy6 71%, $cegy6 97%, rgba(0,0,0,0) 97%)
+  height: 1.9rem
+  @media (max-width: 414px)
+    background: linear-gradient(180deg, rgba(0,0,0,0) 72%, $cegy6 72%, $cegy6 94%, rgba(0,0,0,0) 94%)
+
+// .cegx7
+//   background: $cegy7
+//   height: 1.9rem
+//   line-height: 2rem
+//   display: inline-block
+
+.cegxo
+  display: inline !important
+
+.cegxbold
+  font-weight: 600
+
+.cegxitalic
+  font-style: italic
+  font-weight: 400
+
+.cegxnq
+  font-style: italic
+
+.cegxtitle
+  // font-style: italic
+  margin-bottom: 2px
+  text-decoration: underline
+  text-underline-offset: 0.4rem
+  font-weight: 500
+
+.handbook
+  width: 100%
+  display: flex
+  flex-direction: column
+  .imgSpin
+    width: 10.1rem
+    margin: 0 auto
+    margin-top: 1rem
+    // animation: spinning 21s infinite linear
+    // animation-fill-mode: forwards !important
+    position: absolute
+    z-index: 0
+    left: 0
+    right: 0
+    text-align: center
+    border: 3px solid #f7f7f7
+    border-radius: 100px
+  &__bottom
+    z-index: 2
+    position: relative
+    margin: 8.5rem auto 0 auto
+    display: flex
+    align-items: center
+    flex-direction: column
+    cursor: pointer
+  // &-button
+  //   font-size: 1.4rem
+  &__proof
+    margin: .9rem auto 0 auto
+    text-align: center
+    // position: relative
+    img
+      position: absolute
+      left: 0
+      right: 0
+      margin: 0 auto
+      opacity: 0.8
+      z-index: 0
+    &-text
+      font-size: 1.4rem
+      margin: .3rem auto 0 auto
+      font-weight: 500
+      position: relative
+      z-index: 1
+      .bold
+        font-weight: 600
+
+// @keyframes spinning
+//   0%
+//     transform: rotate(0deg)
+//   100%
+//     transform: rotate(360deg)
+
+// buzzer
+
+
+.cegArt
+  position: fixed
+  right: -3rem
+  top: -6rem
+  z-index: 104
+  border: 0.5rem solid transparent
+  transition: 0.4s
+  display: none
+  @media (max-width: 1480px)
+    display: block
+  @media (max-width: 1024px)
+    display: none
+  &__toggle
+    width: 5.4rem
+    height: 5.4rem
+    border-radius: 100%
+    background-color: #f7f7f7
+    display: flex
+    justify-content: center
+    align-items: center
+    // display: none
+    cursor: pointer
+    &-open
+      position: relative
+      top: 22.5%
+      left: -19%
+      display: block
+    &-close
+      position: relative
+      top: 18%
+      left: -19%
+      display: none
+  &__on
+    .cegArt__toggle-open
+      display: none
+    .cegArt__toggle-close
+      display: block
+  &__visible
+      top: -3rem
+      transition: 0.4s

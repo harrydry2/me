@@ -1,0 +1,198 @@
+mixin tick(text)
+  .tick
+    .tick__icon!=icon("check")
+    .tick__text=text
+
+mixin mail(subscribePage)
+  .outerMail(class=`${subscribePage}`)
+    .newmail
+      .newmail__topLayer
+        //- img.newmail__topLayer-bg(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/hn.svg", alt="")
+        img.newmail__topLayer-bg(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/hnb.svg", alt="")
+        img.newmail__topLayer-center(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/hnbp.png", alt="")
+      .newmail__text
+        //- .newmail__harry
+        //-   .newmail__harry-p Hey, I'm Harry
+        //-   img(src="https://harrydry.s3.amazonaws.com/gdmarketing/quotes/harry.jpg", alt="")
+        .newmail__icon!=icon("cross")
+        .newmail__text-p Hey, I'm Harry. Every Monday I share:
+        .newmail__text-p.newmail__text-p-listTop •!{' '}
+          span.bold 3
+          |!{' '}short examples
+        .newmail__text-p.newmail__text-p-list •!{' '}
+          span.bold 2
+          |!{' '}copywriting tips
+        .newmail__text-p.newmail__text-p-listBottom •!{' '}
+          span.bold 1
+          |!{' '}favourite tweet
+        .newmail__text-p.newmail__text-lh Marketers voted it the “
+          a(href="https://ahrefs.com/blog/best-marketing-newsletters/" target="_blank") #1 marketing newsletter
+          | ”.!{' '}
+          span.bold 130k
+          |!{' '}people enjoy it.
+      .newmail__input
+        .newmail__input-input
+          input(placeholder="Your email")
+          .newmail__input-input-button Try it
+        .newmail__input-red
+      .newmail__test
+        .testy.testy1
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn1.jpg", alt="Dave Gerhadt")
+          .testy__text “My!{' '}
+            span.bold favourite newsletter
+            |!{' '}on the web”
+        .testy.testy2
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn2.jpg", alt="Dave Gerhadt")
+          .testy__text “The newsletter is so!{' '}
+            span.bold f***ing great
+            | !”
+        .testy.testy3
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn14.jpg", alt="Dave Gerhadt")
+          .testy__text “Better than my!{' '}
+            span.bold marketing degree
+            | ”
+        .testy.testy4
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn4.jpg", alt="Dave Gerhadt")
+          .testy__text “🦄🦄🦄 —!{' '}
+            span.bold Nuff said
+            | ”
+        .testy.testy5
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn5.jpg", alt="Dave Gerhadt")
+          .testy__text “The best thing is!{' '}
+            span.bold it works
+            | ”
+        .testy.testy6
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn6.jpg", alt="Dave Gerhadt")
+          .testy__text “How is this!{' '}
+            span.bold still free?
+            | ”
+        .testy.testy1
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn7.jpg", alt="Dave Gerhadt")
+          .testy__text “A genius that!{' '}
+            span.bold actually gives a sh*t
+            |”
+        .testy.testy2
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn8.jpg", alt="Anne-Laure Le-Cnuff")
+          .testy__text “I have!{' '}
+            span.bold no regrets
+            |”
+        .testy.testy3
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn9.jpg", alt="Dave Gerhadt")
+          .testy__text “
+            span.bold Best newsletter
+            | !{' '}I'm subbed to”
+        .testy.testy4
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn10.jpg", alt="Dave Gerhadt")
+          .testy__text “You!{' '}
+            span.bold ALWAYS
+            |!{' '}find something useful”
+        .testy.testy5
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn11.jpg", alt="Dave Gerhadt")
+          .testy__text “No fluff marketing.!{' '}
+            span.bold Works right now
+            |”
+        .testy.testy6
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn12.jpg", alt="Dave Gerhadt")
+          .testy__text “Shit you!{' '}
+            span.bold actually want
+            |!{' '}in your inbox”
+        .testy.testy1
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn13.jpg", alt="Dave Gerhadt")
+          .testy__text “Sadly, there's!{' '}
+            span.bold only one
+            |!{' '}Harry Dry”
+        .testy.testy2
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn3.jpg", alt="Anne-Laure Le-Cnuff")
+          .testy__text “Most wisdom per newsletter!{' '}
+            span.bold of all time
+            | ”
+        .testy.testy3
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn15.jpg", alt="Dave Gerhadt")
+          .testy__text “One of the!{' '}
+            span.bold best marketers
+            |!{' '}I know”
+        .testy.testy4
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn16.jpg", alt="Dave Gerhadt")
+          .testy__text “
+            span.bold One of the best things
+            |!{' '}on the web”
+        .testy.testy5
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn17.jpg", alt="Dave Gerhadt")
+          .testy__text “I can feel my brain!{' '}
+            span.bold getting smarter
+            | ”
+        .testy.testy6
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn18.jpg", alt="Anne-Laure Le-Cnuff")
+          .testy__text “The!{' '}
+            span.bold Sir Alex Ferguson
+            |!{' '}of marketing”
+        .testy.testy1
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn19.jpg", alt="Dave Gerhadt")
+          .testy__text “I!{' '}
+            span.bold haven't read a bad one
+            |!{' '}yet”
+        .testy.testy2
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn20.jpg", alt="Dave Gerhadt")
+          .testy__text “
+            span.bold I wanna be Harry
+            |!{' '}when I grow up”
+          //- .testy__text The only site I share with!{' '}
+          //-   span.bold every person
+          //-   |!{' '}every person that joins my team
+        .testy.testy3
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn21.jpg", alt="Dave Gerhadt")
+          .testy__text “
+            span.bold Gems everywhere
+            |”
+        .testy.testy4
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn22.jpg", alt="Dave Gerhadt")
+          .testy__text “
+            span.bold Dangerous
+            |!{' '}in the wrong hands”
+        .testy.testy5
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn23.jpg", alt="Anne-Laure Le-Cnuff")
+          .testy__text “If you don’t read Marketing Examples!{' '}
+            span.bold you aren’t really a marketer
+            | ”
+        .testy.testy6
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn24.jpg", alt="Dave Gerhadt")
+          .testy__text “I literally!{' '}
+            span.bold can't wait
+            |!{' '}for new issues”
+        .testy.testy1
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn25.jpg", alt="Dave Gerhadt")
+          .testy__text “Multiple notifications so I!{' '}
+            span.bold never miss it
+            |”
+        .testy.testy2
+          .testy__img
+            img(src="https://ik.imagekit.io/o08ysq9vx/cebits/newsletter/photos/hn27.jpg", alt="Dave Gerhadt")
+          .testy__text “The only newsletter I share with!{' '}
+            span.bold every person
+            |!{' '}that joins my team”
+

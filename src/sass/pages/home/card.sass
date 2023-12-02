@@ -1,0 +1,177 @@
+.outerCard
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 1.6rem
+  @media screen and (max-width: 1240px)
+    grid-template-columns: repeat(2, 1fr)
+  @media screen and (max-width: 660px)
+    grid-template-columns: 1fr
+
+// .cardMason
+//   width: calc((100%) / 3)
+//   padding-right: 1.6rem
+  // display: flex
+  // margin-right: -.8rem
+
+.sponsor1
+  grid-row-start: 1
+  grid-column-start: 3
+  @media screen and (max-width: 1240px)
+    grid-column-start: 2
+  @media screen and (max-width: 768px)
+    height: 21rem
+    grid-row-start: 3
+    grid-column-start: auto
+
+.sponsor2
+  grid-row-start: 3
+  grid-column-start: 3
+  @media screen and (max-width: 1240px)
+    grid-column-start: 2
+  @media screen and (max-width: 768px)
+    height: 21rem
+    grid-row-start: 6
+    grid-column-start: auto
+
+.sponsor3
+  grid-row-start: 5
+  grid-column-start: 3
+  @media screen and (max-width: 1240px)
+    grid-column-start: 2
+  @media screen and (max-width: 768px)
+    height: 21rem
+    grid-row-start: 9
+    grid-column-start: auto
+
+.sponsor4
+  grid-row-start: 7
+  grid-column-start: 3
+  @media screen and (max-width: 1240px)
+    grid-column-start: 2
+  @media screen and (max-width: 768px)
+    height: 21rem
+    grid-row-start: 12
+    grid-column-start: auto
+
+.sponsor
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  text-align: center
+  width: 100%
+  &__inner-center
+    border-radius: 40px
+  &__inner
+    max-width: 30rem
+    &-p
+      font-size: 1.5rem
+      line-height: 1.4
+      font-weight: 500
+      margin-top: 1.3rem
+      margin-bottom: 1.7rem
+    &-button
+      display: inline-flex
+      background-color: #054ada
+      padding: 1rem
+      font-size: 1.2rem
+      color: white
+      font-weight: 700
+      border-radius: 5px
+  img, picture
+    height: 2.8rem
+    // width: 6rem
+    // border-radius: 100%
+
+.sponsor2Img
+  height: 4.5rem !important
+
+.card
+  padding: 0.9rem
+  height: 20.5rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border-radius: 2rem
+  border: 3px solid hsla(0, 0%, 97%, 1)
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  z-index: 2
+  // margin-bottom: 1.6rem
+  transition: all 0.2s
+  @media screen and (max-width: 768px)
+    height: 20rem
+  img, picture
+    position: absolute
+    object-fit: cover
+    width: 100%
+    height: 100%
+    top: 0%
+    left: 0%
+    z-index: 0
+  h4
+    font-size: 2.1rem
+    padding: 1.2rem
+    color: #ffffff
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.35)
+    line-height: 1.3
+    font-weight: 700
+    position: relative
+    z-index: 1
+    @media screen and (max-width: 768px)
+      font-size: 2rem
+      padding: 1rem
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    z-index: 1
+    position: relative
+    &-link
+      display: flex
+      align-items: center
+      margin-left: 0.4rem
+      // border: 2px solid blue
+      &-text
+        font-size: 1.4rem
+        text-shadow: 1px 1px 0 rgba(0,0,0,0.35)
+        color: #ffffff
+        margin-left: 0.7rem
+        font-weight: 500
+    &-tag
+      padding: 0.8rem 1.8rem
+      display: flex
+      justify-content: center
+      font-size: 1.25rem
+      font-weight: 500
+      border-radius: 100px
+      // border: 2px solid #f7f7f7
+
+// for both post card and home card
+
+.ct
+  &__content
+    background: #F6C5C4
+  &__seo
+    background: #b5edd4
+  &__sales
+    background: #C2C9FB
+  &__social
+    background: #F1C7ED
+  &__ads
+    background: #FFF9B8
+  // &__affiliate
+  //   background: #C6F0FD
+  &__copywriting
+    background: #C6F0FD
+  &__landing-page
+    background: #F6C5C4
+  &__retention
+    background: #b5edd4
+  &__brand
+    background: #C2C9FB
+  &__referral
+    background: #F1C7ED
+  &__creative
+    background: #FFF9B8

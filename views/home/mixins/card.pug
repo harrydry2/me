@@ -1,0 +1,13 @@
+mixin card({num, title, sUrl, sText, tFront, tBack, slug, img, imgType})
+  a.card.bingo(data-slug=`${slug}` href=`/${tBack}/${slug}`)
+    img(src=`https://ik.imagekit.io/o08ysq9vx/main/${img}.${imgType}` alt=`${sText}`)
+    //- picture
+    //-   source(srcset=`https://s3.amazonaws.com/harrydry/gdmarketing/main/${img}.webp` type="image/webp")
+    //-   source(srcset=`https://s3.amazonaws.com/harrydry/gdmarketing/main/${img}.${imgType}` type="image/jpeg")
+    //-   img(src=`https://s3.amazonaws.com/harrydry/gdmarketing/main/${img}.${imgType}` alt=`${sText}`)
+    h4=title
+    .card__bottom
+      .card__bottom-link
+        .ideaSVG!=icon("ideaSVG")
+        .pCard__bottom-link-text=sText
+      .card__bottom-tag(class=`ct__${tBack}`)=tFront

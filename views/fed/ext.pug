@@ -1,0 +1,114 @@
+extends base
+
+include ./ceg
+include ../home/mixins/mail
+include ../home/mixins/ph
+
+block content
+  .fed__outer
+    .fed__outer-side.fed__outer-side-left
+      #stars.stars-left
+      #stars2.stars2-left
+    .fed
+      //- +phBase1()
+      .cegm__top
+        a(href="/inspiration")
+          img(src="https://ik.imagekit.io/o08ysq9vx/mebits/logo2.png", alt="Logo")
+          //- img(src="https://ik.imagekit.io/o08ysq9vx/cebits/cegLogo.png", alt="Logo")
+        .cegm__top-right
+          .cegm__top-right-minus!=icon("cegfilterminus3")
+          .cegm__top-right-plus.cegmtr__active!=icon("cegfilterplus1")
+          .cegm__top-right-menu.cegmtr__active!=icon("cegmail1")
+          .cegm__top-right-menuminus!=icon("cegmail3a")
+      .cegm__bottom
+        .cegm__bottom-inner
+          //- .cegm__bottom-ns!=icon("ra4")
+          img(src="https://ik.imagekit.io/o08ysq9vx/mebits/jf4.svg", alt="" class="cegm__bottom-ns")
+          .cegm__bottom-tab.fth.cegi-shade1(data-num='1') Headers
+          .cegm__bottom-tab.fth.cegi-shade2(data-num='2') Features
+          .cegm__bottom-tab.fth.cegi-shade3(data-num='3') Social Proof
+          .cegm__bottom-tab.fth.cegi-shade4(data-num='4') Story
+          .cegm__bottom-tab.fth.cegi-shade5(data-num='5') Lead Magnet
+          .cegm__bottom-tab.fth.cegi-shade6(data-num='6') Ads
+        .cegm__bottom-sep
+        .cegm__bottom-inner
+          //- .cegm__bottom-ns!=icon("ra5")
+          //- .cegm__bottom-ns.cegm__bottom-ns-padding STYLE
+          img(src="https://ik.imagekit.io/o08ysq9vx/mebits/jf5.svg", alt="" class="cegm__bottom-ns")
+          .cegm__bottom-tab.bth.cegi-shade7(data-num='7') Simple
+          .cegm__bottom-tab.bth.cegi-shade8(data-num='8') Outcomes
+          .cegm__bottom-tab.bth.cegi-shade9(data-num='9') Creative
+          .cegm__bottom-tab.bth.cegi-shade10(data-num='10') Contrast
+          .cegm__bottom-tab.bth.cegi-shade11(data-num='11') Rhetorical
+          .cegm__bottom-tab.bth.cegi-shade12(data-num='12') Conversational
+        .cegm__bottom-sep
+        .cegm__bottom-inner
+          //- .cegm__bottom-ns!=icon("ra6")
+          img(src="https://ik.imagekit.io/o08ysq9vx/mebits/jf6.svg", alt="" class="cegm__bottom-ns")
+          .cegm__bottom-tab.bbth.cegi-shade13(data-num='13') B2B
+          .cegm__bottom-tab.bbth.cegi-shade14(data-num='14') B2C
+      .cegl
+        a(href="/inspiration")
+          img(src="https://ik.imagekit.io/o08ysq9vx/mebits/logo2.png", alt="Logo" class="cegl__logo")
+        //- img(src="https://ik.imagekit.io/o08ysq9vx/mebits/logo2.png", alt="Logo" class="cegl__logo")
+        .cegl__filter.cegl__filter-one
+          .cegl__filter-title!=icon("ceg1")
+          .cegl__filter-tab.fth.cegi-shade1(data-num='1') Headers
+          .cegl__filter-tab.fth.cegi-shade2(data-num='2') Features
+          .cegl__filter-tab.fth.cegi-shade3(data-num='3') Social Proof
+          .cegl__filter-tab.fth.cegi-shade4(data-num='4') Story
+          .cegl__filter-tab.fth.cegi-shade5(data-num='5') Lead Magnet
+          .cegl__filter-tab.fth.cegi-shade6(data-num='6') Ads
+        .cegl__filter
+          .cegl__filter-title!=icon("ceg2")
+          .cegl__filter-tab.bth.cegi-shade7(data-num='7') Simple
+          .cegl__filter-tab.bth.cegi-shade8(data-num='8') Outcomes
+          .cegl__filter-tab.bth.cegi-shade9(data-num='9') Creative
+          .cegl__filter-tab.bth.cegi-shade10(data-num='10') Contrast
+          .cegl__filter-tab.bth.cegi-shade11(data-num='11') Rhetorical
+          .cegl__filter-tab.bth.cegi-shade12(data-num='12') Conversational
+        .cegl__filter.cegl__filter-three
+          .cegl__filter-title!=icon("ceg8")
+          .cegl__filter-tab.bbth.cegi-shade13(data-num='13') B2B
+          .cegl__filter-tab.bbth.cegi-shade14(data-num='14') B2C
+        .cegl__filter
+          .cegl__filter-title!=icon("me3")
+          .handbook
+            img(src="https://ik.imagekit.io/o08ysq9vx/mebits/tape.png", alt="Mixtapes").imgSpin
+            .handbook__bottom
+              img(src="https://ik.imagekit.io/o08ysq9vx/mebits/tmm5.svg", alt="" class="handbook-button")
+            .handbook__proof
+              img(src="https://ik.imagekit.io/o08ysq9vx/mebits/stars2.svg", alt="" class="")
+              .handbook__proof-text “
+                span.bold #1
+                |!{' '}Marketing Newsletter”
+              .handbook__proof-text Read by!{' '}
+                span.bold 130k
+      .cegm__notice Tap each example for break down
+      .ceRight
+        .cegArt
+          .cegArt__toggle
+            .cegArt__toggle-open!=icon("close1")
+            .cegArt__toggle-close!=icon("open1")
+        .ceTop
+          .ceTop__left
+            .ceTop-mail
+              .ceTop-mail-left
+                .ceTop-mail-left-icon!=icon("mail")
+                input(type="text" placeholder="Get 6 new tips in your inbox every Monday").nh2
+              .nh1.cmtGlitch.cmtGlitchClick Yes Please :)
+            .nh3
+          .ceTop__right
+            //- a(href="https://calendly.com/harrydry/live?month=2023-03" target="_blank").ceTop__right-sign.dropout3 Work with me
+            a(href="https://docs.google.com/document/d/1Qw77TlBmqXdFBWCihSvI0S0gQaumKZK_2WS2dx8ok-I/edit?usp=sharing" target="_blank").ceTop__right-sign.dropout3 Sponsor
+            a(href="/").ceTop__right-sign Marketing Examples
+            a(href="https://www.youtube.com/marketingexamples" target="_blank")!=icon("ytnu")
+            a(href="https://www.linkedin.com/in/harrydry/" target="_blank")!=icon("linu")
+            a(href="https://twitter.com/goodmarketinghq" target="_blank")!=icon("tnu")
+        .fedgrid(data-masonry='{ "itemSelector": ".cegio", "transitionDuration": 0}')
+          each ceg in cegs
+            +ceg(ceg)
+    +mail()
+    .fed__outer-side.fed__outer-side-right
+      #stars.stars-right
+      #stars2.stars2-right

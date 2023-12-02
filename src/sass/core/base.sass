@@ -1,2 +1,166 @@
-html, body
-  color: black
+html,body
+  font-family: "AvenirNext"
+  font-size: 10px
+  font-weight: 400
+  color: #030212
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility !important
+  -moz-osx-font-smoothing: grayscale !important
+
+a
+  display: inline
+  clear: none
+
+.slack
+  max-width: 60rem
+  display: flex
+  margin: 0 auto
+  padding: 2rem 2rem 2rem 2rem
+  flex-direction: column
+  justify-content: center
+
+.slacka
+  color: #4742DE
+
+*
+  -webkit-overflow-scrolling: touch
+
+.noScroll
+  // position: fixed
+  height: 100%
+  overflow: hidden
+
+.mailNoScroll
+  overflow: hidden
+  position: fixed
+  height: 100%
+  width: 100%
+
+.line
+  border-bottom: 2px solid #f7f7f7
+  margin: 1rem 0 2rem 0
+  width: 100%
+
+.postNoScroll
+  // overflow: hidden
+  position: fixed
+  height: 100%
+  // @media screen and (max-width: 768px)
+  //   overflow: auto
+
+input, div, p
+  font-family: "AvenirNext"
+
+h1
+  font-size: 2.6rem
+  font-weight: 600
+  @media (max-width: 1180px)
+    font-size: 2.6rem
+
+p
+  font-size: 1.9rem
+  line-height: 1.8
+  @media (max-width: 1180px)
+    font-size: 1.7rem
+
+.randomSVG
+  position: relative
+  top: 5px
+  left: 5px
+  display: inline
+  @media (max-width: 1180px)
+    display: none
+
+// .filter
+//   border: 2px solid gold
+
+// .filter.active
+//   border-bottom: 10px solid #ff4742
+
+// loader
+
+.popupLoader
+  position: absolute
+  background-color: white
+  z-index: 5
+  width: 100%
+  height: 100%
+  justify-content: center
+  align-items: center
+  display: none
+
+.outerLoader
+  height: 8rem
+  width: 100%
+  margin-top: 4rem
+  display: none
+
+.loader
+  display: block
+  margin: 0 auto
+  width: 6rem
+  height: 6rem
+  border-radius: 50%
+  background: #4742de
+  background: linear-gradient(to right, #4742de 10%, rgba(71,66,222, 0) 42%)
+  position: relative
+  animation: load3 1s infinite linear
+  transform: translateZ(0)
+.loader:before
+  width: 50%
+  height: 50%
+  background: #4742de
+  border-radius: 100% 0 0 0
+  position: absolute
+  top: 0
+  left: 0
+  content: ''
+
+.loader:after
+  background: #ffffff
+  width: 75%
+  height: 75%
+  border-radius: 50%
+  content: ''
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+
+@keyframes load3
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.filterH1
+  padding: 3rem 0rem 0.8rem 3rem
+
+.harry
+  position: fixed
+  background: #fff
+  z-index: 3
+  right: 0
+  bottom: 0
+  border-top-left-radius: 3px
+  padding: 0.8rem
+  border-top: 1px solid hsla(0, 0%, 90%, 1)
+  border-left: 1px solid hsla(0, 0%, 90%, 1)
+  display: flex
+  align-items: center
+  @media screen and (max-width: 940px)
+    display: none
+  &__img
+    border-radius: 100px
+    width: 2.4rem
+    height: 2.4rem
+    margin-right: 0.8rem
+  &__text
+    font-size: 1.5rem
+    color: #030212
+    opacity: 0.9
+
+

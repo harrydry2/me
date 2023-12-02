@@ -10,8 +10,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(
   `mongodb+srv://harrydry:${
     process.env.PWORD
-  }@gdmarketing-mxilm.mongodb.net/test`,
-  { useNewUrlParser: true }
+  }@gdmarketing-mxilm.mongodb.net/test`
 );
 require("./models/Cards.js");
 // require("./models/Test.js");

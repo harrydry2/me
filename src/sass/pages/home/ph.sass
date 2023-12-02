@@ -1,0 +1,45 @@
+.ph
+  align-items: center
+  height: 5.4rem
+  width: 148rem
+  background-color: #10141C
+  cursor: pointer
+  transition: all 0.4s
+  position: fixed
+  display: flex
+  z-index: 4
+  animation: ltr 320s linear 0.01s infinite
+  -webkit-animation-name: ltr
+  -webkit-animation-duration: 320s
+  -webkit-animation-delay: 0.01s
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-timing-function: linear
+
+  @media (max-width: 1024px)
+    height: 5rem
+    animation: ltr 60s infinite linear
+  img
+    height: 5.4rem
+    background-color: #10141C
+    @media (max-width: 1024px)
+      height: 5rem
+
+.ph__mob
+  @media (max-width: 1024px)
+    display: none
+
+@keyframes ltr
+  0%
+    margin-left: 0
+  100%
+    margin-left: -600%
+    @media (max-width: 1024px)
+      margin-left: -200%
+
+@-webkit-keyframes ltr
+  0%
+    margin-left: 0
+  100%
+    margin-left: -600%
+    @media (max-width: 1024px)
+      margin-left: -200%

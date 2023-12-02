@@ -1,15 +1,31 @@
-// core
-// @import core/defaults/reset
-// @import core/variables
-@use 'core/base'
+@use 'core/defaults/reset'
 @use 'core/fonts'
-// @import core/icons
+@use 'core/base'
+@use 'core/icons'
 
-html, body
-  font-size: 20px
-  font-weight: 400
-  -webkit-font-smoothing: antialiased
-  text-rendering: optimizeLegibility !important
-  -moz-osx-font-smoothing: grayscale !important
-  font-family: "AvenirNext"
-//   color: $black
+// home
+@use 'pages/home/home'
+@use 'pages/home/card'
+@use 'pages/home/ph'
+@use 'pages/gifs/gifs'
+
+// popup
+@use 'pages/popup/mail'
+
+// posts
+@use 'pages/posts/post'
+@use 'pages/posts/postcard'
+@use 'pages/posts/content'
+
+// general
+@use 'general/menu'
+
+// copywritingexamples
+@use 'pages/ce/ce'
+
+// zzz
+@use 'pages/zzz/zzz'
+@use 'pages/zzy/zzy'
+
+// course
+@use 'pages/course/course'

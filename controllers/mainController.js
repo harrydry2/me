@@ -8,6 +8,20 @@ const dbCeg = require("../scripts/ceg");
 
 let shuffledCeg = [];
 
+const validFilters = [
+  "content",
+  "seo",
+  "sales",
+  "social",
+  "ads",
+  "copywriting",
+  "landing-page",
+  "retention",
+  "brand",
+  "referral",
+  "creative",
+];
+
 function findCommonElements(arr1, arr2) {
   return arr1.every((item) => arr2.includes(item));
 }
@@ -125,49 +139,59 @@ exports.postceg = async (req, res) => {
 
 exports.filters = async (req, res) => {
   const { filters } = req.params;
-  const activeFilters = [filters];
-  const page = req.params.page || 1;
-  const limit = 12;
-  const skip = limit * page - limit;
-  const cards = await Cards.find({ tBack: { $in: activeFilters } })
-    .skip(skip)
-    .limit(limit);
-  const smalltitle = activeFilters[0];
-  let titlenum = "";
-  let title;
-  if (smalltitle === "content") {
-    titlenum = "1";
-  } else if (smalltitle === "seo") {
-    titlenum = "2";
-  } else if (smalltitle === "sales") {
-    titlenum = "3";
-  } else if (smalltitle === "social") {
-    titlenum = "4";
-  } else if (smalltitle === "ads") {
-    titlenum = "5";
-  } else if (smalltitle === "copywriting") {
-    titlenum = "6";
-  } else if (smalltitle === "landing-page") {
-    titlenum = "7";
-  } else if (smalltitle === "retention") {
-    titlenum = "8";
-  } else if (smalltitle === "brand") {
-    titlenum = "9";
-  } else if (smalltitle === "referral") {
-    titlenum = "10";
-  } else if (smalltitle === "creative") {
-    titlenum = "11";
-  }
-  const toTitleCase = (phrase) =>
-    phrase
-      .toLowerCase()
-      .split(" ")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  if (smalltitle === "landing-page") {
-    title = "Landing Page";
+  if (validFilters.includes(filters)) {
+    const activeFilters = [filters];
+    const page = req.params.page || 1;
+    const limit = 12;
+    const skip = limit * page - limit;
+    const cards = await Cards.find({ tBack: { $in: activeFilters } })
+      .skip(skip)
+      .limit(limit);
+    const smalltitle = activeFilters[0];
+    let titlenum = "";
+    let title;
+    if (smalltitle === "content") {
+      titlenum = "1";
+    } else if (smalltitle === "seo") {
+      titlenum = "2";
+    } else if (smalltitle === "sales") {
+      titlenum = "3";
+    } else if (smalltitle === "social") {
+      titlenum = "4";
+    } else if (smalltitle === "ads") {
+      titlenum = "5";
+    } else if (smalltitle === "copywriting") {
+      titlenum = "6";
+    } else if (smalltitle === "landing-page") {
+      titlenum = "7";
+    } else if (smalltitle === "retention") {
+      titlenum = "8";
+    } else if (smalltitle === "brand") {
+      titlenum = "9";
+    } else if (smalltitle === "referral") {
+      titlenum = "10";
+    } else if (smalltitle === "creative") {
+      titlenum = "11";
+    }
+    const toTitleCase = (phrase) =>
+      phrase
+        .toLowerCase()
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+    if (smalltitle === "landing-page") {
+      title = "Landing Page";
+    } else {
+      title = toTitleCase(smalltitle);
+    }
+    res.render("filters/ext", {
+      cards,
+      title,
+      activeFilters,
+      filters,
+      titlenum,
+    });
   } else {
-    title = toTitleCase(smalltitle);
+    res.status(404).send("Not Found");
   }
-  res.render("filters/ext", { cards, title, activeFilters, filters, titlenum });
 };

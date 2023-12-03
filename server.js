@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
 
+const errorHandlers = require("./controllers/errorController");
+
 mongoose.Promise = global.Promise;
 mongoose.connect(
   `mongodb+srv://harrydry:${process.env.PWORD}@gdmarketing-mxilm.mongodb.net/test`
@@ -37,6 +39,20 @@ app.use((req, res, next) => {
 });
 
 app.use("/", routes);
+
+app.use(errorHandlers.notFound);
+
+// One of our error handlers will see if these errors are just validation errors
+app.use(errorHandlers.flashValidationErrors);
+
+// Otherwise this was a really bad error we didn't expect! Shoot eh
+if (app.get("env") === "development") {
+  /* Development Error Handler - Prints stack trace */
+  app.use(errorHandlers.developmentErrors);
+}
+
+// production error handler
+app.use(errorHandlers.productionErrors);
 
 const PORT = process.env.PORT || 7777;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

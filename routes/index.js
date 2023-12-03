@@ -5,6 +5,7 @@ const mainController = require("../controllers/mainController");
 const postController = require("../controllers/postController");
 const courseController = require("../controllers/courseController");
 const emailController2 = require("../controllers/emailController2");
+const {requireAuth} = require("../controllers/authMiddleware");
 
 // Homepage
 router.get("/", mainController.home);
@@ -21,8 +22,9 @@ router.post("/api/subscribe", emailController2.subscribe);
 // // CoursePage
 router.get("/course9", courseController.course9);
 router.get("/createcheckout", courseController.createCheckout);
-router.get("/course10", courseController.course10);
-router.get("/course10/:slug", courseController.coursePage);
+router.use("/justboughtthecourse", courseController.justbought);
+router.get("/course10", requireAuth, courseController.course10);
+router.get("/course10/:slug", requireAuth, courseController.coursePage);
 
 // // Inspiration
 router.get("/inspiration", mainController.fed);

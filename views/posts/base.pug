@@ -17,18 +17,6 @@ html(lang='en')
     meta(property='og:image:height', content='630')
     meta(property='og:image:width', content='1200')
     meta(property='og:type', content='website')
-    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-91909305-10')
-    //- script(async='' src='https://dash.sparkloop.app/widget/MFdc2f2006be/embed.js' data-sparkloop='')
-    script.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-91909305-10');
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KFP5QFB');
     title #{card.title}
     meta(property='og:title', content=`${card.title}`)
     meta(name='twitter:title', content=`${card.title}`)
@@ -39,9 +27,6 @@ html(lang='en')
     meta(name='twitter:description', content=`${card.desc}`)
     meta(property='og:image', content=`https://s3.amazonaws.com/harrydry/gdmarketing/cards/${card.img}.jpg`)
     meta(name='twitter:image', content=`https://s3.amazonaws.com/harrydry/gdmarketing/cards/${card.img}.jpg`)
-    body
-    noscript
-      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-KFP5QFB' height='0' width='0' style='display:none;visibility:hidden')
     .iosOverflow.home__outer.pausedatanimation
       .home__outer-side.home__outer-side-left
         #stars.stars-left
@@ -60,41 +45,10 @@ html(lang='en')
                 a.undera__center-twitter(href=`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}` target="_blank")!=icon("facebook")
                 a.undera__center-twitter(href=`https://twitter.com/intent/tweet?url=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}&via=GoodMarketingHQ%20&text=${encodeURI(card.title)}` target="_blank")!=icon("twitter")
                 a.undera__center-twitter(href=`https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}` target="_blank")!=icon("linkedin")
-            //- .postEmail
-            //-   .postEmail__header Join!{' '}
-            //-     span.bold 85,273
-            //-     |!{' '}marketers getting<br> the weekly case study
-            //-   .mail__input
-            //-     .mail__input-icon!=icon("mail")
-            //-     input(placeholder="example@example.com")
-            //-   .mail__button Get new case studies
-            //-   .mail__bc-red
-            //- .monial
-            //-   .monial__inner
-            //-     .monial__inner-quote “
-            //-     .monial__inner-text Hands down!{' '}
-            //-       span.monial__inner-text-bold the best
-            //-       |!{' '}marketing newsletter I'm subscribed to.
-            //-     .monial__inner-bottom
-            //-       a(href="https://twitter.com/george__mack" target="_blank")
-            //-         img.monial__inner-bottom-pic(src="https://harrydry.s3.amazonaws.com/gdmarketing/gm.jpg", alt="George Mack Marketing")
-            //-       .monial__inner-bottom-text
-            //-         a(href="https://twitter.com/george__mack" target="_blank").monial__inner-bottom-text-top George Mack
-            //-         a(href="https://www.sportstack.com?ref=marketingexamples" target="_blank").monial__inner-bottom-text-bottom Growth marketing consultant
-            //-   .monial__inner
-            //-     .monial__inner-quote “
-            //-     .monial__inner-text Marketing Examples is so f***ing great. I love it!
-            //-     .monial__inner-bottom
-            //-       a(href="https://twitter.com/bentossell" target="_blank")
-            //-         img.monial__inner-bottom-pic(src="https://harrydry.s3.amazonaws.com/gdmarketing/ben.jpg", alt="Ben Tossell Marketing")
-            //-       .monial__inner-bottom-text
-            //-         a(href="https://twitter.com/bentossell" target="_blank").monial__inner-bottom-text-top Ben Tossell
-            //-         a(href="https://www.makerpad.co?ref=marketingexamples" target="_blank").monial__inner-bottom-text-bottom Founder, Makerpad
       +home(cards, activeFilters)
       +mail(subscribePage)
       .home__outer-side.fed__outer-side-right
         #stars.stars-right
         #stars2.stars2-right
-      //- +harry()
   block scripts
     script(src="/dist/bundle1.js")

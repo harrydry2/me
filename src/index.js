@@ -15,6 +15,10 @@ import {
 } from "./modules/fed";
 
 import {
+  vimeoWatcher
+} from "./modules/coursedash";
+
+import {
   mailPopup,
   actualPopup,
   mailSubmitFromPost,
@@ -243,11 +247,6 @@ if ($(".fed")) {
   $(".handbook__bottom").on("click", () => {
     actualPopup();
   });
-  // if ($('.cmtGlitchClick')) {
-  //   $('.cmtGlitchClick').on('click', () => {
-  //     actualPopup();
-  //   });
-  // }
   history.scrollRestoration = "manual";
 }
 
@@ -259,3 +258,7 @@ if ($(".zzy")) {
   });
 }
 // course 10
+
+if ($(".zzz")) {
+  vimeoWatcher();
+}

@@ -3,246 +3,427 @@
     "id": 0,
     "title": "",
     "slug": "",
-    "vidid": 888258161
+    "vidid": 888258161,
+    "type": "learn"
   },
   {
     "id": 1,
     "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890855810
+    "slug": "890855810",
+    "vidid": 890855810,
+    "type": "learn"
   },
   {
     "id": 2,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890855831
+    "slug": "890855831",
+    "vidid": 890855831,
+    "type": "learn"
   },
   {
     "id": 3,
     "title": "Why story & positioning?",
-    "slug": "why-story-&-positioning",
-    "vidid": 890855861
+    "slug": "890855861",
+    "vidid": 890855861,
+    "type": "learn"
   },
   {
     "id": 4,
-    "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890855877
+    "title": "Setup. Conflict. Resolution.",
+    "slug": "890855877",
+    "vidid": 890855877,
+    "type": "learn"
   },
   {
     "id": 5,
-    "title": "",
-    "slug": "",
-    "vidid": 890855893
+    "title": "Storytelling 1",
+    "slug": "890855893",
+    "vidid": 890855893,
+    "type": "learn"
   },
   {
     "id": 6,
-    "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890855913
+    "title": "Storytelling 2",
+    "slug": "890855913",
+    "vidid": 890855913,
+    "type": "learn"
   },
   {
     "id": 7,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890855924
+    "slug": "890855924",
+    "vidid": 890855924,
+    "type": "learn"
   },
   {
     "id": 8,
     "title": "Block theory",
-    "slug": "block-theory",
-    "vidid": 890855929
+    "slug": "890855929",
+    "vidid": 890855929,
+    "type": "learn"
   },
   {
     "id": 9,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890855937
+    "slug": "890855937",
+    "vidid": 890855937,
+    "type": "learn"
   },
   {
     "id": 10,
     "title": "",
-    "slug": "",
-    "vidid": 890855945
+    "slug": "890855945",
+    "vidid": 890855945,
+    "type": "learn"
   },
   {
     "id": 11,
     "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890855969
+    "slug": "890855969",
+    "vidid": 890855969,
+    "type": "learn"
   },
   {
     "id": 12,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890855979
+    "slug": "890855979",
+    "vidid": 890855979,
+    "type": "learn"
   },
   {
     "id": 13,
     "title": "Block theory",
-    "slug": "block-theory",
-    "vidid": 890855993
+    "slug": "890855993",
+    "vidid": 890855993,
+    "type": "learn"
   },
   {
     "id": 14,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890856002
+    "slug": "890856002",
+    "vidid": 890856002,
+    "type": "learn"
   },
   {
     "id": 15,
     "title": "",
-    "slug": "",
-    "vidid": 890856010
+    "slug": "890856010",
+    "vidid": 890856010,
+    "type": "learn"
   },
   {
     "id": 16,
     "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890856014
+    "slug": "890856014",
+    "vidid": 890856014,
+    "type": "learn"
   },
   {
     "id": 17,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890856022
+    "slug": "890856022",
+    "vidid": 890856022,
+    "type": "learn"
   },
   {
     "id": 18,
     "title": "Block theory",
-    "slug": "block-theory",
-    "vidid": 890856031
+    "slug": "890856031",
+    "vidid": 890856031,
+    "type": "learn"
   },
   {
     "id": 19,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890856042
+    "slug": "890856042",
+    "vidid": 890856042,
+    "type": "learn"
   },
   {
     "id": 20,
     "title": "",
-    "slug": "",
-    "vidid": 890856052
+    "slug": "890856052",
+    "vidid": 890856052,
+    "type": "learn"
   },
   {
     "id": 21,
     "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890856064
+    "slug": "890856064",
+    "vidid": 890856064,
+    "type": "learn"
   },
   {
     "id": 22,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890856073
+    "slug": "890856073",
+    "vidid": 890856073,
+    "type": "learn"
   },
   {
     "id": 23,
     "title": "Block theory",
-    "slug": "block-theory",
-    "vidid": 890856079
+    "slug": "890856079",
+    "vidid": 890856079,
+    "type": "learn"
   },
   {
     "id": 24,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890856087
+    "slug": "890856087",
+    "vidid": 890856087,
+    "type": "learn"
   },
   {
     "id": 25,
     "title": "",
-    "slug": "",
-    "vidid": 890856096
+    "slug": "890856096",
+    "vidid": 890856096,
+    "type": "learn"
   },
   {
     "id": 26,
     "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890878298
+    "slug": "890878298",
+    "vidid": 890878298,
+    "type": "learn"
   },
   {
     "id": 27,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890878314
+    "slug": "890878314",
+    "vidid": 890878314,
+    "type": "learn"
   },
   {
     "id": 28,
     "title": "Block theory",
-    "slug": "block-theory",
-    "vidid": 890878321
+    "slug": "890878321",
+    "vidid": 890878321,
+    "type": "learn"
   },
   {
     "id": 29,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890878335
+    "slug": "890878335",
+    "vidid": 890878335,
+    "type": "learn"
   },
   {
     "id": 30,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890878342
+    "slug": "890878342",
+    "vidid": 890878342,
+    "type": "learn"
   },
   {
     "id": 31,
     "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890878346
+    "slug": "890878346",
+    "vidid": 890878346,
+    "type": "learn"
   },
   {
     "id": 32,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890878355
+    "slug": "890878355",
+    "vidid": 890878355,
+    "type": "learn"
   },
   {
     "id": 33,
     "title": "Block theory",
-    "slug": "block-theory",
-    "vidid": 890878361
+    "slug": "890878361",
+    "vidid": 890878361,
+    "type": "learn"
   },
   {
     "id": 34,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890878366
+    "slug": "890878366",
+    "vidid": 890878366,
+    "type": "learn"
   },
   {
     "id": 35,
     "title": "",
-    "slug": "",
-    "vidid": 890878380
+    "slug": "890878380",
+    "vidid": 890878380,
+    "type": "learn"
   },
   {
     "id": 36,
     "title": "Six hours in London",
-    "slug": "six-hours-in-london",
-    "vidid": 890880904
+    "slug": "890880904",
+    "vidid": 890880904,
+    "type": "learn"
   },
   {
     "id": 37,
     "title": "My model of the game",
-    "slug": "my-model-of-the-game",
-    "vidid": 890880915
+    "slug": "890880915",
+    "vidid": 890880915,
+    "type": "learn"
   },
   {
     "id": 38,
     "title": "Block theory",
-    "slug": "block-theory",
-    "vidid": 890880926
+    "slug": "890880926",
+    "vidid": 890880926,
+    "type": "learn"
   },
   {
     "id": 39,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890880939
+    "slug": "890880939",
+    "vidid": 890880939,
+    "type": "learn"
   },
   {
     "id": 40,
     "title": "The five pieces",
-    "slug": "the-five-pieces",
-    "vidid": 890880955
+    "slug": "890880955",
+    "vidid": 890880955,
+    "type": "learn"
+  },
+  {
+    "id": 41,
+    "title": "Taste test",
+    "slug": "888258161",
+    "vidid": 888258161,
+    "type": "do"
+  },
+  {
+    "id": 42,
+    "title": "Taste test",
+    "slug": "893283132",
+    "vidid": 893283132,
+    "type": "do"
+  },
+  {
+    "id": 43,
+    "title": "Taste test",
+    "slug": "893283175",
+    "vidid": 893283175,
+    "type": "do"
+  },
+  {
+    "id": 44,
+    "title": "Taste test",
+    "slug": "893283226",
+    "vidid": 893283226,
+    "type": "do"
+  },
+  {
+    "id": 45,
+    "title": "Taste test",
+    "slug": "893283553",
+    "vidid": 893283553,
+    "type": "do"
+  },
+  {
+    "id": 46,
+    "title": "Taste test",
+    "slug": "893283588",
+    "vidid": 893283588,
+    "type": "do"
+  },
+  {
+    "id": 47,
+    "title": "Taste test",
+    "slug": "893283638",
+    "vidid": 893283638,
+    "type": "do"
+  },
+  {
+    "id": 48,
+    "title": "Taste test",
+    "slug": "893283710",
+    "vidid": 893283710,
+    "type": "do"
+  },
+  {
+    "id": 49,
+    "title": "Taste test",
+    "slug": "893283787",
+    "vidid": 893283787,
+    "type": "do"
+  },
+  {
+    "id": 50,
+    "title": "Taste test",
+    "slug": "893283860",
+    "vidid": 893283860,
+    "type": "do"
+  },
+  {
+    "id": 51,
+    "title": "Taste test",
+    "slug": "893283961",
+    "vidid": 893283961,
+    "type": "do"
+  },
+  {
+    "id": 52,
+    "title": "Taste test",
+    "slug": "893284002",
+    "vidid": 893284002,
+    "type": "do"
+  },
+  {
+    "id": 53,
+    "title": "Taste test",
+    "slug": "893315557",
+    "vidid": 893315557,
+    "type": "do"
+  },
+  {
+    "id": 54,
+    "title": "Taste test",
+    "slug": "893284185",
+    "vidid": 893284185,
+    "type": "do"
+  },
+  {
+    "id": 55,
+    "title": "Taste test",
+    "slug": "893315703",
+    "vidid": 893315703,
+    "type": "do"
+  },
+  {
+    "id": 56,
+    "title": "Taste test",
+    "slug": "893315752",
+    "vidid": 893315752,
+    "type": "do"
+  },
+  {
+    "id": 57,
+    "title": "Taste test",
+    "slug": "893315794",
+    "vidid": 893315794,
+    "type": "do"
+  },
+  {
+    "id": 58,
+    "title": "Taste test",
+    "slug": "893315838",
+    "vidid": 893315838,
+    "type": "do"
+  },
+  {
+    "id": 59,
+    "title": "Taste test",
+    "slug": "893315922",
+    "vidid": 893315922,
+    "type": "do"
+  },
+  {
+    "id": 60,
+    "title": "Taste test",
+    "slug": "893315977",
+    "vidid": 893315977,
+    "type": "do"
   }
 ]

@@ -1,13 +1,28 @@
 extends base
 
-include ./mixins/menu
+include ./mixins/learnmenu
+include ./mixins/domenu
+include ./mixins/bar
+include ./mixins/topmenu
 
 block content
   .iosOverflow
   .zzz
-    +menu(matchingSlug)
+    if video.type === "learn"
+      +learnmenu(video, user.completedVidsLearn, user.activeVidLearn, user.activeVidDo)
+    if video.type === "do"
+      +domenu(video, user.completedVidsDo, user.activeVidDo, user.activeVidLearn)
     .zzz__right
-      .zzz__right-video
-        div(style='padding:56.25% 0 0 0;position:relative;')
-          iframe(src=`https://player.vimeo.com/video/888258161?h=846edcfcb8&badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479` frameborder='0' allow='autoplay; fullscreen; picture-in-picture' style='position:absolute;top:0;left:0;width:100%;height:100%;' title='Cut')
-        script(src='https://player.vimeo.com/api/player.js')
+      +topmenu()
+      .zzz__right-cont
+        .zzz__right-cont-split
+          p #{video.id}/72
+          p.zzz__right-cont-split-end UP NEXT IN 
+            span.zzz__right-cont-split-end-countdown 5
+          p #{video.title}
+        .zzz__right-cont-video(data-timestamp=timestamp)
+          div(style='padding:56.25% 0 0 0;position:relative;')
+            iframe(src=`https://player.vimeo.com/video/${video.vidid}?h=846edcfcb8&badge=0&autoplay=1&autopause=0&quality_selector=1&player_id=0&app_id=58479` frameborder='0' allow='autoplay; fullscreen; picture-in-picture' style='position:absolute;top:0;left:0;width:100%;height:100%;' title='Cut')
+      +bar(completedVids, isthebarStuck)
+
+

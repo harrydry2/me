@@ -2,68 +2,302 @@
   background-color: #ffffff
   display: flex
   &__left
-    width: 36.8rem
+    width: 36.4rem
     height: 100vh
     display: block
-    background-color: #f9f6dd
-    border-right: 2px solid #f1eab1
     position: fixed
     overflow-y: scroll
     -ms-overflow-style: none
     scrollbar-width: none
-    // position: relative
     &::-webkit-scrollbar
       display: none
-    &-logo
-      padding: 2.7rem 0rem 0rem 2.6rem
-    &-toggle
-      position: absolute
-      right: 2.2rem
-      top: 1.2rem
-      height: 5.8rem
+    &-learn
+      background-color: #f9f6dd
+      border-right: 2px solid #f1eab1
+    &-do
+      background-color: #EBEAEB
+      border-right: 2px solid hsla(0, 0%, 8%, .14)
+    &-head
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 2.7rem 1.8rem 0rem 2.6rem
+      &-toggle
+        display: flex
+        transform: translateY(1px) scale(1.08)
+        align-items: center
+        position: relative
     &-disc
       padding: 1.4rem 0rem 0rem 2.4rem
   &__right
-    width: calc(100% - 36.8rem)
-    margin-left: 36.8rem
+    width: calc(100% - 36.4rem)
+    margin-left: 36.4rem
     height: 100vh
     display: flex
     align-items: center
-    &-video
+    position: relative
+    overflow: hidden
+    &-cont
+      padding: 2rem
       width: 100%
-      padding: 5rem
+      @media (min-width: 1280px)
+        padding: 2rem
+      @media (min-width: 1480px)
+        padding: 4rem
+      &-split
+        display: flex
+        justify-content: space-between
+        p
+          font-size: 1.44rem
+          font-family: HelveticaNeue
+          color: hsl(0, 0%, 50%)
+          text-transform: uppercase
+          padding-bottom: .5rem
+        &-end
+          opacity: 0
+          &-countdown
+            color: hsl(0, 0%, 8%)
 
 .zzz
   &__left
     &-module
-      padding: 0 2.4rem 0 2.6rem
+      padding: 0 2.4rem 0 2rem
       &-head
-        font-family: HelveticaNeue
-        font-weight: bold
-        font-size: 1.44rem
-        color: #111111
         padding-top: 2.4rem
+        display: flex
+        &-text
+          font-family: HelveticaNeue
+          font-weight: bold
+          font-size: 1.44rem
+          color: hsl(0, 0%, 8%)
+        &-ticks
+          display: flex
+          padding-left: 0.8rem
+          padding-right: 0.6rem
+          &-tick
+            height: 1.2rem
         &-first
           padding-top: 2.6rem
       &-vid
         padding-left: 1.6rem
         padding-top: 1.4rem
         line-height: 1.9rem
-        // font-family: ACaslonPro
         &-t
           display: inline
-          &-active
-            background-color: #f1eab1
           a
             font-size: 1.42rem
             font-weight: 400
-            // transition: all 0.2s
             &:hover
-              // background-color: #f1eab1
-              border-bottom: 1px solid #111111
-              // transition: all 0.2s
-          span
+              border-bottom: 1px solid hsla(0, 0%, 8%, 1)
+          &-active
+            background-color: #f1eab1
+          &-time
             font-style: italic
-            opacity: 70%
+            color: hsla(0, 0%, 8%, 0.7)
             font-size: 1.2rem
+            position: relative
 
+.playedVideoTextColor
+  color: hsla(160, 100%, 21%, 1)
+
+.notPlayedVideoTextColor
+  color: hsla(0, 0%, 8%, 1)
+
+.zzz__left-dovids
+  padding: 2.6rem 0 0 2.6rem
+  &-vid
+    font-size: 1.42rem
+    font-weight: 400
+    line-height: 2.2rem
+    &-active
+      background-color: hsl(10 1% 85%)
+    a
+      &:hover
+        border-bottom: 1px solid hsla(0, 0%, 8%, 1)
+    &-time
+      font-style: italic
+      color: hsla(0, 0%, 8%, 0.7)
+      font-size: 1.2rem
+      position: relative
+      padding-right: 0.6rem
+    &-num
+      display: inline
+      &-dummy
+        opacity: 0
+
+  // Toggle Menu
+
+.zzz__left-head-toggle-ld
+  cursor: pointer
+  padding: 0 0.6rem
+
+.zzzLearnActive
+  .toggleSlider
+    position: absolute
+    z-index: -1
+    transform: skew(-8deg)
+    height: 1.9rem
+    top: -.2rem
+    transition: background-color 0.4s ease, width 0.4s ease, left 0.4s ease
+    background-color: hsla(53, 66%, 82%, 0.8)
+    width: 5.6rem
+    left: .1rem
+  &-do
+    .doSVG
+      path
+        fill-opacity: 0.5
+        transition: fill-opacity 0.3s
+    &:hover
+      .doSVG
+        path
+          fill-opacity: 1
+          transition: fill-opacity 0.3s
+
+.zzzLearnDo
+  .toggleSlider
+    position: absolute
+    z-index: -1
+    transform: skew(-8deg)
+    height: 1.9rem
+    top: -.2rem
+    transition: background-color 0.3s ease, width 0.3s ease, left 0.3s ease
+    background-color: hsla(0, 0%, 85%, 0.78)
+    width: 2.9rem
+    left: 6.9rem
+  &-active
+    .learnSVG
+      path
+        fill-opacity: 0.5
+        transition: fill-opacity 0.3s
+    &:hover
+      .learnSVG
+        path
+          fill-opacity: 1
+          transition: fill-opacity 0.3s
+
+.zzz__bar
+  height: 3rem
+  position: absolute
+  bottom: 0
+  width: 100%
+  background-color: hsl(0, 0%, 96%)
+  &-progress
+    left: 0
+    height: 3rem
+    background: linear-gradient(270deg, rgba(0, 123, 255, 0.80) 0%, rgba(0, 123, 255, 0.48) 48%, rgba(0, 123, 255, 0.32) 100%)
+    // &-width
+    //   transition: width 1s ease
+    //   width: 50%
+  &-flag
+    right: 0.5rem
+    position: absolute
+    bottom: 0
+    height: 5rem
+  &-dashed
+    height: 1px
+    background-repeat: repeat-x
+    position: absolute
+    bottom: 1.45rem
+    // transition: width 1s ease 0.2s
+  &-writer
+    bottom: 0rem
+    height: 6.7rem
+    position: absolute
+    z-index: 2
+    opacity: 1
+    transition: left 1s
+
+// gradient width // writer left // dashed width // total dashes 
+
+.zzz__menu
+  top: 0
+  padding: 1.7rem
+  width: 100%
+  position: absolute
+  display: flex
+  justify-content: space-between
+  @media (min-width: 1280px)
+    padding: 1.7rem 2rem
+  @media (min-width: 1480px)
+    padding: 1.7rem 4rem
+  &-search
+    z-index: 2
+    &-bar
+      border: 2px solid hsl(0, 0%, 92%)
+      border-radius: 4px
+      padding: 0.8rem 0.8rem 0.8rem 1.7rem
+      width: 50rem
+      height: 5rem
+      display: flex
+      align-items: center
+      &:focus-within
+        border: 2px solid hsl(0, 0%, 8%)
+        border: 2px solid #5E9ED6
+      input
+        font-size: 1.44rem
+        font-family: HelveticaNeue
+        padding-left: 1.2rem
+        color: hsl(0, 0%, 8%)
+        text-transform: uppercase
+        width: 100%
+        &::placeholder
+          color: hsl(0, 0%, 82%)
+    &-results
+      border: 1px solid hsl(0, 0%, 92%)
+      margin-top: .4rem
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 7px 14px 0px rgba(60, 66, 87, 0.08)
+      border-radius: 4px
+      background: white
+      padding: 0.4rem 0
+      z-index: 107
+      position: relative
+      pointer-events: initial
+      display: none
+      &-cont
+        display: flex
+        align-items: center
+        transition: 0.2s
+        justify-content: space-between
+        padding: 4px 9px
+        cursor: pointer
+        &-left
+          display: flex
+          align-items: center
+          img
+            height: 6rem
+            border-radius: 4px
+            margin-right: 12px
+            width: 10rem
+            border: 1px solid hsl(0, 0%, 92%)
+            object-fit: cover
+          &-vid
+            font-size: 1.42rem
+            font-weight: 500
+            span
+              color: hsla(0, 0%, 8%, 0.7)
+              font-weight: 400
+              margin-top: 0.2rem
+            .hl
+              background: #ffc600
+        &-arrow
+          opacity: 0
+          transition: 0.2s
+          width: .6rem
+          margin-right: 0.4rem
+        &:hover
+          background: hsl(0, 0%, 94%)
+          transition: 0.2s
+          .zzz__menu-search-results-cont-arrow
+            opacity: 1
+            transition: 0.2s
+  &-tabs
+    font-size: 1.44rem
+    font-family: HelveticaNeue
+    color: hsl(0, 0%, 50%)
+    margin-top: 1.8rem
+    a
+      padding-left: 2rem
+
+.zzz_hl
+  // background: #f1eab1
+  background: #ffc600

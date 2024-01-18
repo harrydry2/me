@@ -5,8 +5,10 @@ const mainController = require("../controllers/mainController");
 const postController = require("../controllers/postController");
 const courseController = require("../controllers/courseController");
 const emailController2 = require("../controllers/emailController2");
-const {requireAuth} = require("../controllers/authMiddleware");
+const {requireAuth, checkUser} = require("../controllers/authMiddleware");
 
+// Auth
+router.get('*', checkUser);
 // Homepage
 router.get("/", mainController.home);
 router.get("/api/getcontent", mainController.getcontent);
@@ -25,6 +27,9 @@ router.get("/createcheckout", courseController.createCheckout);
 router.use("/justboughtthecourse", courseController.justbought);
 router.get("/course10", requireAuth, courseController.course10);
 router.get("/course10/:slug", requireAuth, courseController.coursePage);
+router.post("/api/vidended", checkUser, courseController.vidended);
+router.get("/api/coursesearch", courseController.coursesearch);
+
 
 // // Inspiration
 router.get("/inspiration", mainController.fed);

@@ -1,0 +1,45 @@
+mixin mendo(title, slug, time, activeVidDo, id, last, completedVidsDo, num)
+  - var vidActive = activeVidDo === parseInt(id) ? "zzz__left-dovids-vid-active" : "";
+  - var vidTextColor = completedVidsDo.includes(id.toString()) ? "playedVideoTextColor" : "notPlayedVideoTextColor";
+  .zzz__left-dovids-vid
+    .zzz__left-dovids-vid-num
+      if parseInt(num) < 10
+        span.zzz__left-dovids-vid-num-dummy 1
+      span #{num}.!{' '}
+    a(href=`/course10/${slug}` class=`${vidActive} ${vidTextColor}`) #{title}
+    span.zzz__left-dovids-vid-time !{' '}(#{time})
+    if completedVidsDo.includes(id)
+      img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/finaltck.png" class="zzz__left-module-head-ticks-tick")
+    //- else
+    //-   img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/tickkkfalse.png" class="zzz__left-module-head-ticks-tick") 
+
+mixin domenu(video, completedVidsDo, activeVidDo, activeVidLearn)
+  .zzz__left.zzz__left-do
+    .zzz__left-head
+      img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/gpt99silver.svg", alt="" class="")
+      .zzz__left-head-toggle.zzzLearnDo
+        a(href=`/course10/${activeVidLearn}`).zzz__left-head-toggle-ld.zzzLearnDo-active!=icon("learn")
+        .zzz__left-head-toggle-stroke!=icon("stroke")
+        a(href=`/course10/${activeVidDo}`).zzz__left-head-toggle-ld!=icon("do")
+        .toggleSlider
+    .zzz__left-dovids
+      +mendo("Taste test", "888258161", "2:04", video.id, "41", false, completedVidsDo, "1")
+      +mendo("A story about databases", "893283132", "1:56", video.id, "42", false, completedVidsDo, "2")
+      +mendo("Positioning a cook book", "893283175", "3:04", video.id, "43", false, completedVidsDo, "3")
+      +mendo("A good line is a great line made shorter", "893283226", "2:14", video.id, "44", false, completedVidsDo, "4")
+      +mendo("Make it visual", "893283553", "2:04", video.id, "45", false, completedVidsDo, "5")
+      +mendo("Make it falsifiable", "893283588", "1:56", video.id, "46", false, completedVidsDo, "6")
+      +mendo("Make it yours", "893283638", "3:04", video.id, "47", false, completedVidsDo, "7")
+      +mendo("Not-so-cold email", "893283710", "2:14", video.id, "48", false, completedVidsDo, "8")
+      +mendo("9192631770", "893283787", "2:04", video.id, "49", false, completedVidsDo, "9")
+      +mendo("The seven minute drill", "893283860", "1:56", video.id, "50", false, completedVidsDo, "10")
+      +mendo("Positioning a cook book", "893283961", "3:04", video.id, "51", false, completedVidsDo, "11")
+      +mendo("Three billboards", "893284002", "2:14", video.id, "52", false, completedVidsDo, "12")
+      +mendo("7 headers", "893315557", "1:58", video.id, "53", false, completedVidsDo, "13")
+      +mendo("My great mistake", "893284185", "1:56", video.id, "54", false, completedVidsDo, "14")
+      +mendo("Five minute home page", "893315703", "3:04", video.id, "55", false, completedVidsDo, "15")
+      +mendo("Oh no CRO", "893315752", "3:04", video.id, "56", false, completedVidsDo, "16")
+      +mendo("Three billboards", "893315794", "2:14", video.id, "57", false, completedVidsDo, "17")
+      +mendo("7 headers", "893315838", "1:58", video.id, "58", false, completedVidsDo, "18")
+      +mendo("My great mistake", "893315922", "1:56", video.id, "59", false, completedVidsDo, "19")
+      +mendo("Only then, a Jedi will you be", "893315977", "3:04", video.id, "60", false, completedVidsDo, "20")

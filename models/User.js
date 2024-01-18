@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 
@@ -11,14 +11,26 @@ const userSchema = new mongoose.Schema({
   bought: {
     type: String,
   },
-  completedVids: {
+  completedVidsLearn: {
     type: [String],
     default: [],
   },
-  activeVid: {
+  completedVidsDo: {
+    type: [String],
+    default: [],
+  },
+  activeVidLearn: {
     type: String,
-    default: '1',
+    default: "890855810",
+  },
+  activeVidDo: {
+    type: String,
+    default: "888258161",
+  },
+  lastVid: {
+    type: String,
+    default: "888258161",
   },
 });
 
-module.exports = mongoose.model('Users', userSchema);
+module.exports = mongoose.model("Users", userSchema);

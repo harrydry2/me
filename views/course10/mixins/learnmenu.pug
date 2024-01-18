@@ -1,0 +1,158 @@
+mixin men(title, slug, time, activeVidLearn, num, last, completedVidsLearn)
+  - var vidActive = activeVidLearn === parseInt(num) ? "zzz__left-module-vid-t-active" : "";
+  - var vidTextColor = completedVidsLearn.includes(num.toString()) ? "playedVideoTextColor" : "notPlayedVideoTextColor";
+  .zzz__left-module-vid-t
+    a(href=`/course10/${slug}` class=`${vidActive} ${vidTextColor}`) #{title}
+    span.zzz__left-module-vid-t-time !{' '}(#{time})
+    if !last
+      |!{' '}-!{' '}
+
+mixin tick(moduleVids, completedVidsLearn)
+  if moduleVids.every(vid => completedVidsLearn.includes(vid))
+    img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/finaltck.png" class="zzz__left-module-head-ticks-tick")
+  else
+    img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/tickkkfalse.png" class="zzz__left-module-head-ticks-tick")
+
+mixin learnmenu(video, completedVidsLearn, activeVidLearn, activeVidDo)
+  .zzz__left.zzz__left-learn
+    .zzz__left-head
+      img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/lclogo2.svg", alt="" class="")
+      .zzz__left-head-toggle.zzzLearnActive
+        a(href=`/course10/${activeVidLearn}`).zzz__left-head-toggle-ld!=icon("learn")
+        .zzz__left-head-toggle-stroke!=icon("stroke")
+        a(href=`/course10/${activeVidDo}`).zzz__left-head-toggle-ld.zzzLearnActive-do!=icon("do")
+        .toggleSlider
+    .zzz__left-module
+      .zzz__left-module-head.zzz__left-module-head-first
+        .zzz__left-module-head-text 1. ARE YOU SITTING COMFORTABLY
+        .zzz__left-module-head-ticks
+          +tick(["1", "2", "3"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Six hours in London", "890855810", "3:04", video.id, "1", false, completedVidsLearn)
+        +men("My model of the game", "890855831", "3:12", video.id, "2", false, completedVidsLearn)
+        +men("Why Story & Positioning", "890855861", "2:44", video.id, "3", true, completedVidsLearn)
+    img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/dj1.svg", alt="" class="zzz__left-disc")
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 2. STORY
+        .zzz__left-module-head-ticks
+          +tick(["4", "5", "6"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Setup. Conflict. Resolution.", "890855877", "3:04", video.id, "4", false, completedVidsLearn)
+        +men("Storytelling 1", "890855893", "3:12", video.id, "5", false, completedVidsLearn)
+        +men("Storytelling 2", "890855913", "2:44", video.id, "6", true, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 3. POSITIONING
+        .zzz__left-module-head-ticks
+          +tick(["7", "8", "9", "10", "11", "12"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("The five pieces", "890855924", "3:04", video.id, "7", false, completedVidsLearn)
+        +men("The space you own", "890855929", "3:12", video.id, "8", false, completedVidsLearn)
+        +men("How you win", "890855937", "2:44", video.id, "9", false, completedVidsLearn)
+        +men("Competitive set", "890855945", "3:04", video.id, "10", false, completedVidsLearn)
+        +men("Why you", "890855969", "3:12", video.id, "11", false, completedVidsLearn)
+        +men("All together now", "890855979", "2:44", video.id, "12", true, completedVidsLearn)
+    img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/dj2.svg", alt="" class="zzz__left-disc")
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 4. WHO YOU'RE TALKING TO
+        .zzz__left-module-head-ticks
+          +tick(["13", "14"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Match your messaging", "890855993", "3:04", video.id, "13", false, completedVidsLearn)
+        +men("Components of Copy", "890856002", "3:12", video.id, "14", false, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 5. SEVEN COLOURED PENS
+        .zzz__left-module-head-ticks
+          +tick(["15", "16", "17", "18", "19", "20", "21"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Attention", "890856010", "3:04", video.id, "15", false, completedVidsLearn)
+        +men("Argument", "890856014", "3:12", video.id, "16", false, completedVidsLearn)
+        +men("Outcome", "890856022", "2:44", video.id, "17", false, completedVidsLearn)
+        +men("Product", "890856031", "3:04", video.id, "18", false, completedVidsLearn)
+        +men("Proof", "890856042", "3:12", video.id, "19", false, completedVidsLearn)
+        +men("Objections", "890856052", "3:04", video.id, "20", false, completedVidsLearn)
+        +men("Offer", "890856064", "3:12", video.id, "21", true, completedVidsLearn)
+      .zzz__left-module-head
+        .zzz__left-module-head-text 6. WRITING SIMPLY
+        .zzz__left-module-head-ticks
+          +tick(["22", "23", "24", "25", "26"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Intro", "890856073", "3:04", video.id, "22", false, completedVidsLearn)
+        +men("Cut", "890856079", "3:12", video.id, "23", false, completedVidsLearn)
+        +men("Sharpen", "890856087", "2:44", video.id, "24", false, completedVidsLearn)
+        +men("Stitch", "890856096", "3:04", video.id, "25", false, completedVidsLearn)
+        +men("Three rewrites", "890878298", "3:12", video.id, "26", true, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 7. WRITING PERSUASIVELY
+        .zzz__left-module-head-ticks
+          +tick(["27", "28", "29", "30", "31", "32"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Three litmus tests", "890856096", "3:04", video.id, "27", false, completedVidsLearn)
+        +men("Visual", "890878298", "3:12", video.id, "28", false, completedVidsLearn)
+        +men("Falsifiable", "890878314", "2:44", video.id, "29", false, completedVidsLearn)
+        +men("Yours", "890878321", "3:04", video.id, "30", false, completedVidsLearn)
+        +men("How to write not like a robot", "890878335", "3:12", video.id, "31", false, completedVidsLearn)
+        +men("Hot 97 Freestyle", "890878342", "3:04", video.id, "32", true, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 8. WRITING RHYMICALLY
+        .zzz__left-module-head-ticks
+          +tick(["33", "34", "35"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Cadence", "890878346", "3:04", video.id, "33", false, completedVidsLearn)
+        +men("Rhetoric", "890878355", "3:12", video.id, "34", false, completedVidsLearn)
+        +men("Three rewrites", "890878361", "2:44", video.id, "35", true, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 9. WRITING VISUALLY
+        .zzz__left-module-head-ticks
+          +tick(["36", "37", "38"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Tools in your bag", "890878366", "3:04", video.id, "36", false, completedVidsLearn)
+        +men("Not quite angel delight", "890878380", "3:12", video.id, "37", false, completedVidsLearn)
+        +men("I like pictures", "890880904", "2:44", video.id, "38", false, completedVidsLearn)
+    img(src="https://ik.imagekit.io/o08ysq9vx/gpt99/dj3a.svg", alt="" class="zzz__left-disc")
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 10. LANDING PAGES
+        .zzz__left-module-head-ticks
+          +tick(["39", "40", "41", "42", "43"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Six ways to write a header", "890880915", "3:04", video.id, "39", false, completedVidsLearn)
+        +men("Above the fold", "890880926", "3:04", video.id, "40", false, completedVidsLearn)
+        +men("Below the fold", "890880939", "3:12", video.id, "41", false, completedVidsLearn)
+        +men("17 CRO tips", "890880939", "2:44", video.id, "42", false, completedVidsLearn)
+        +men("Some Harry Dry magic", "890880939", "3:04", video.id, "43", true, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 11. EMAIL
+        .zzz__left-module-head-ticks
+          +tick(["44", "45", "46", "47", "48"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Cold outreach", "890880939", "3:04", video.id, "44", false, completedVidsLearn)
+        +men("Getting subscribers (1% to 5%)", "890880939", "3:12", video.id, "45", false, completedVidsLearn)
+        +men("Lessons from six million emails", "890880939", "2:44", video.id, "46", false, completedVidsLearn)
+        +men("97% of welcome emails suck", "890880939n", "3:04", video.id, "47", false, completedVidsLearn)
+        +men("Money emails (17 examples)", "890880939", "3:12", video.id, "48", true, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 12. ADS
+        .zzz__left-module-head-ticks
+          +tick(["49", "50", "51"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Three litmus tests", "890880939", "3:04", video.id, "49", false, completedVidsLearn)
+        +men("A little thing called creativity", "890880939", "3:12", video.id, "50", false, completedVidsLearn)
+        +men("Falsifiable", "890880939", "2:44", video.id, "51", false, completedVidsLearn)
+    .zzz__left-module
+      .zzz__left-module-head
+        .zzz__left-module-head-text 13. SOCIAL
+        .zzz__left-module-head-ticks
+          +tick(["52", "53", "54"], completedVidsLearn)
+      .zzz__left-module-vid
+        +men("Captain Hook", "890880939", "3:04", video.id, "52", false, completedVidsLearn)
+        +men("Visual", "890880939", "3:12", video.id, "53", false, completedVidsLearn)
+        +men("Falsifiable", "890880939", "2:44", video.id, "54", false, completedVidsLearn)

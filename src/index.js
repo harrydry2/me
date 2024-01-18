@@ -14,9 +14,7 @@ import {
   cegMobileNewsletter,
 } from "./modules/fed";
 
-import {
-  vimeoWatcher
-} from "./modules/coursedash";
+// import { vimeoWatcher, adjustDashes, searchBar, playFromTimestamp} from "./modules/coursedash";
 
 import {
   mailPopup,
@@ -259,6 +257,9 @@ if ($(".zzy")) {
 }
 // course 10
 
-if ($(".zzz")) {
-  vimeoWatcher();
-}
+// if ($(".zzz")) {
+//   vimeoWatcher();
+//   adjustDashes();
+//   searchBar();
+//   playFromTimestamp();
+// }

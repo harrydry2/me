@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const stripe = require("stripe")(`${process.env.STRIPESK}`);
+const fs = require('fs');
 const path = require("path");
 const dbcourseVids = require("../scripts/courseVids");
 
@@ -39,23 +40,61 @@ exports.justbought = async (req, res) => {
   }
 };
 
+// This is the /course route
+
 exports.course10 = async (req, res) => {
-  res.render("./course10/ext", {
-    matchingSlug: {
-      id: 1,
-      title: "Six hours in London",
-      slug: "six-hours-in-london",
-      vidid: 888258161,
-    },
-  });
+  // If not logged in show buy page
+  if (!req.user) {
+    res.render("./course9/ext");
+  } else {
+    // If logged in display activeVideo
+    const { lastVid } = req.user;
+    res.redirect(`/course10/${lastVid}`);
+  }
 };
 
+// This is the course/slug route
+
 exports.coursePage = async (req, res) => {
+  // Get the user
+  const user = req.user;
+  const completedVids = user.completedVidsLearn.length + user.completedVidsDo.length
+  // Get the video
   const { slug } = req.params;
-  const matchingSlug = dbcourseVids.find((obj) => obj.slug === slug);
-  console.log(matchingSlug, "sq");
+  if (req.query.t) {
+    var timestamp = req.query.t.replace('s', '');
+  } else {
+    var timestamp = 0
+  }
+  const video = dbcourseVids.find((obj) => obj.slug === slug);
+  const isthebarStuck = user.completedVidsLearn.includes(video.id) || user.completedVidsDo.includes(video.id) ? "true" : "false";
+  // if video is learn 
+  try {
+    if (video.type === "learn") {
+      await Users.findByIdAndUpdate(user._id, {
+        $set: { 
+          activeVidLearn: slug, 
+          lastVid: slug 
+        },
+      });
+    }
+    if (video.type === "do") {
+      await Users.findByIdAndUpdate(user._id, {
+        $set: { 
+          activeVidDo: slug, 
+          lastVid: slug 
+        },
+      });
+    }   
+  } catch (err) {
+    console.log(err, "err");
+  }
   res.render("./course10/ext", {
-    matchingSlug,
+    video,
+    user,
+    completedVids,
+    isthebarStuck,
+    timestamp
   });
 };
 
@@ -69,4 +108,32 @@ exports.createCheckout = async (req, res) => {
   });
   // console.log(session, "che");
   res.redirect(session.url);
+};
+
+exports.vidended = async (req, res) => {
+  const { slug } = req.body;
+  const video = dbcourseVids.find((obj) => obj.slug === slug);
+  // prep for redirect
+  const { slug: redirectSlug } = dbcourseVids.find((obj) => obj.id === video.id + 1);
+  try {
+    // Update the user in the database
+    if (video.type === "learn") {
+      await Users.findByIdAndUpdate(req.user._id, {
+        $addToSet: { completedVidsLearn: video.id },
+      });
+    }
+    if (video.type === "do") {
+      await Users.findByIdAndUpdate(req.user._id, {
+        $addToSet: { completedVidsDo: video.id },
+      });
+    }
+    res.json({ redirectUrl: `/course10/${redirectSlug}` });
+  } catch (err) {
+    console.log(err, "err");
+  }
+};
+
+exports.coursesearch = async (req, res) => {
+  const filePath = path.join(__dirname, '..', 'scripts', 'courseData.json');
+  res.sendFile(filePath);
 };

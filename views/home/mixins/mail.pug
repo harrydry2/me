@@ -33,6 +33,7 @@ mixin mail(subscribePage)
       .newmail__input
         .newmail__input-input
           input(placeholder="Your email")
+          input(autocomplete='off' type='text' name='name' placeholder='Your name here' tabindex="-1").nottoday.nhMailPopup
           .newmail__input-input-button Try it
         .newmail__input-red
       .newmail__test

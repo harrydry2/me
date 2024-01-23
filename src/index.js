@@ -170,7 +170,7 @@ if (
   } else {
     console.log("no more emails popups for loving subs");
   }
-  // mailSubmitHome();
+  mailSubmitHome();
 }
 //
 

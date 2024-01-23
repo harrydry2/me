@@ -18,7 +18,7 @@ export function actualPopup() {
   }
 }
 
-function submitMail(button, red, input, num) {
+function submitMail(button, red, input, num, honeyPot) {
   console.log(window.SL, "is this a thing?");
   var numm = num;
   button.on("click", async () => {
@@ -27,6 +27,9 @@ function submitMail(button, red, input, num) {
       $(".iosOverflow").classList.contains("number5chanel")
     ) {
       numm = 5;
+    }
+    if (honeyPot.value) {
+      return;
     }
     red.style.display = "block";
     if (validateEmail(input.value)) {
@@ -82,6 +85,7 @@ export function mailPopup() {
   const mailRed = $(".newmail__input .newmail__input-red");
   const outerMail = $(".outerMail");
   const mailClose = $(".newmail__icon");
+  const honeyPot = $(".nhMailPopup");
 
   // const onEmailList = window.localStorage.getItem("onEmailList");
   const onEmailList = false;
@@ -103,7 +107,7 @@ export function mailPopup() {
   if (
     onEmailList !== "true" &&
     !alreadyPoppedUp &&
-    (lsMail == null || howLongSinceClosed > 24)
+    (lsMail == null || howLongSinceClosed > 1)
   ) {
     if (window.innerWidth <= 30000) {
       setTimeout(() => {
@@ -112,7 +116,7 @@ export function mailPopup() {
           $(".iosOverflow").classList.add("mailNoScroll");
           $(".iosOverflow").classList.add("number5chanel");
         }
-      }, 60000);
+      }, 30000);
     }
   }
 
@@ -130,14 +134,16 @@ export function mailPopup() {
     }
     // window.history.back();
   });
-  submitMail(mailButton, mailRed, mailInput, emailNum);
+  submitMail(mailButton, mailRed, mailInput, emailNum, honeyPot);
 }
 
 export function mailSubmitHome() {
   const mailButtonSpec = $(".nh1");
   const mailInputSpec = $(".nh2");
   const mailRedSpec = $(".nh3");
-  submitMail(mailButtonSpec, mailRedSpec, mailInputSpec, 1);
+  const honeyPot = $(".nh4");
+  // honeyPot check
+  submitMail(mailButtonSpec, mailRedSpec, mailInputSpec, 1, honeyPot);
 }
 
 export function mailSubmitFromPost() {
@@ -186,7 +192,8 @@ export function mailSubmitFed() {
   const mailButtonSpec = $(".search__text");
   const mailInputSpec = $(".search__left > input");
   const mailRedSpec = $(".search__text-info");
-  submitMail(mailButtonSpec, mailRedSpec, mailInputSpec, 1);
+  const honeyPot = $(".nh5");
+  submitMail(mailButtonSpec, mailRedSpec, mailInputSpec, 1, honeyPot);
 }
 
 // 1 - home

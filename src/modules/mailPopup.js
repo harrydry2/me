@@ -31,9 +31,8 @@ function submitMail(button, red, input, num) {
     red.style.display = "block";
     if (validateEmail(input.value)) {
       if (typeof window.SL !== "undefined") {
-        console.log("YAHOOOOOOO");
-        console.log(SL, "manuel");
         SL.trackSubscriber(input.value);
+        console.log(SL, input.value);
       }
       window.localStorage.setItem("onEmailList", "true");
       if (numm === 7) {

@@ -44,7 +44,7 @@ function isMobile(ua) {
 exports.home = async (req, res) => {
   // get skip + limit
   const page = +req.params.page || 1;
-  const limit = 12;
+  const limit = 100;
   const skip = limit * page - limit;
   const cards = await Cards.find().skip(skip).limit(limit);
   res.render("./home/ext", { cards });
@@ -71,7 +71,7 @@ exports.lazy = async (req, res) => {
   let cards;
   const { page } = req.params || 1;
   const { filterParam } = req.params;
-  const limit = 12;
+  const limit = 100;
   const skip = limit * page - limit;
   if (filterParam === "all") {
     cards = await Cards.find().skip(skip).limit(limit);
@@ -142,7 +142,7 @@ exports.filters = async (req, res) => {
   if (validFilters.includes(filters)) {
     const activeFilters = [filters];
     const page = req.params.page || 1;
-    const limit = 12;
+    const limit = 100;
     const skip = limit * page - limit;
     const cards = await Cards.find({ tBack: { $in: activeFilters } })
       .skip(skip)

@@ -29,6 +29,7 @@ function submitMail(button, red, input, num, honeyPot) {
       numm = 5;
     }
     if (honeyPot.value) {
+      console.log("HONEY ERROR")
       return;
     }
     red.style.display = "block";

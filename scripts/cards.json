@@ -9,7 +9,7 @@
       "slug": "press-b",
       "img": "pressb30",
       "imgType": "jpg",
-      "desc": "CTA sticky as you scroll. My new favourite CRO experiment. 25% Press “B”. "
+      "desc": "CTA sticky as you scroll. My new favourite CRO experiment. 25% Press “B”."
     },
     {
       "num": "9",
@@ -1702,6 +1702,90 @@
       "img": "beamery",
       "imgType": "jpg",
       "desc": "An example from Beamery showing just how easy it is to personalise your cold emails without sounding like a jerk."
+    },
+    {
+      "num": "9",
+      "title": "Two million clicks from one email",
+      "sUrl": "",
+      "sText": "30 secs",
+      "tFront": "Sales",
+      "tBack": "sales",
+      "slug": "feastables",
+      "img": "beamery",
+      "imgType": "jpg",
+      "desc": "Yes. You did read that right."
+    },
+    {
+      "num": "9",
+      "title": "10% of ARR from two typo domains",
+      "sUrl": "",
+      "sText": "30 secs",
+      "tFront": "Creative",
+      "tBack": "creative",
+      "slug": "typo-domains",
+      "img": "beamery",
+      "imgType": "jpg",
+      "desc": "A short story about why buying typo domains might be a good idea"
+    },
+    {
+      "num": "9",
+      "title": "My new favourite agency ad",
+      "sUrl": "",
+      "sText": "30 secs",
+      "tFront": "Ads",
+      "tBack": "ad",
+      "slug": "do-great-work",
+      "img": "beamery",
+      "imgType": "jpg",
+      "desc": "Most agency marketing looks something like this. Search Intelligence's strategy is a little simpler."
+    },
+    {
+      "num": "9",
+      "title": "“Don't make me think”",
+      "sUrl": "",
+      "sText": "30 secs",
+      "tFront": "Brand",
+      "tBack": "brand",
+      "slug": "ag1",
+      "img": "beamery",
+      "imgType": "jpg",
+      "desc": "There’s ONE way to buy Athletic Greens."
+    },
+    {
+      "num": "9",
+      "title": "One of these videos has eighteen million views",
+      "sUrl": "",
+      "sText": "30 secs",
+      "tFront": "Copywriting",
+      "tBack": "copywriting",
+      "slug": "promise",
+      "img": "beamery",
+      "imgType": "jpg",
+      "desc": "Take a guess."
+    },
+    {
+      "num": "9",
+      "title": "Inside Steven Bartlett's Facebook ad library",
+      "sUrl": "",
+      "sText": "30 secs",
+      "tFront": "Content",
+      "tBack": "content",
+      "slug": "doac",
+      "img": "beamery",
+      "imgType": "jpg",
+      "desc": "Fifty small-budget campaigns testing thumbnails for future podcasts. Whichever one has highest CTR gets picked. Clever."
+    },
+    {
+      "num": "9",
+      "title": "The Dream 100",
+      "sUrl": "",
+      "sText": "2 mins",
+      "tFront": "Sales",
+      "tBack": "sales",
+      "slug": "dream-100",
+      "img": "beamery",
+      "imgType": "jpg",
+      "desc": "The story starts in California. 1981. Charlie Munger hires Chet Holmes to sell magazine ads. He's given a list of 2,200 potential advertisers and a bunch of flyers."
     }
   ]
   

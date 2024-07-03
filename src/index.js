@@ -53,6 +53,7 @@ if (
   !$(".cegM") &&
   !$(".zzz") &&
   !$(".zzy") &&
+  !$(".roast") &&
   !$(".fed")
 ) {
   lazyLoad(filterArray);
@@ -70,6 +71,7 @@ if (
   !$(".cegM") &&
   !$(".zzz") &&
   !$(".zzy") &&
+  !$(".roast") &&
   !$(".fed")
 ) {
   let currentnum;
@@ -163,6 +165,7 @@ if (
   !$(".ceg") &&
   !$(".zzz") &&
   !$(".zzy") &&
+  !$(".roast") &&
   !$(".cegM")
 ) {
   if (!window.location.href.includes("utm_source=newsletter")) {
@@ -195,6 +198,7 @@ if (
   !$(".cegM") &&
   !$(".zzz") &&
   !$(".zzy") &&
+  !$(".roast") &&
   !$(".fed")
 ) {
   postPopup(Array.from($$(".card")));

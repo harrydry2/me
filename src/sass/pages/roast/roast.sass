@@ -1,44 +1,36 @@
 .backButton
   position: absolute
-  top: 3.6rem
+  top: 3.2rem
   left: 4rem
-  // p 
-  //   font-size: 1.6rem
-  //   line-height: 1.7
-  //   a
-  //     border-bottom: 1px solid
+  @media screen and (max-width: 880px)
+    display: none
 
 .roast
   justify-content: center
   align-items: center
   max-width: 600px
-  margin: 4rem auto
+  margin: 3rem auto
+  @media screen and (max-width: 880px)
+    margin: 3rem 1.8rem
   p 
     font-size: 1.6rem
     margin: 1.6rem auto
     line-height: 1.7
+    @media screen and (max-width: 880px)
+      font-size: 1.5rem
     a
       border-bottom: 1px solid
-  h1
-    font-size: 3.1rem
-    margin: 1.8rem auto
-    line-height: 1.7
-    font-weight: 700 
-  h2 
-    font-size: 2.1rem
-    margin: 1.8rem auto
-    line-height: 1.7
-    font-weight: 600
   img
     max-width: 100%
     margin: 1.6rem auto
+    @media screen and (max-width: 880px)
+      margin: 1reem auto
   &__400
-    max-width: 40rem !important
+    max-width: 36rem !important
+    @media screen and (max-width: 880px)
+      max-width: 100% !important
   &__50
     max-width: 5rem !important
-  .asterix
-    margin: 1.6rem auto !important
-    text-align: center
 
 .bullet
   margin: 0 1rem !important

@@ -57,6 +57,11 @@ exports.fed = async (req, res) => {
   res.render("./fed/ext", { cegs });
 };
 
+exports.roast = async (req, res) => {
+  res.render("./roast/ext");
+};
+
+
 exports.xml = async (req, res) => {
   res.contentType("application/xml");
   res.sendFile(path.join(__dirname, "sitemap.xml"));

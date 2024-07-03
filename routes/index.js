@@ -36,6 +36,10 @@ router.get("/inspiration", mainController.fed);
 router.get("/api/lazyceg/:page/:filterParam", mainController.lazyCeg);
 router.get("/api/postceg", mainController.postceg);
 
+// Roast
+
+router.get("/roast", mainController.roast);
+
 // // Misc
 router.get("/robots.txt", mainController.txt);
 router.get("/sitemap.xml", mainController.xml);

@@ -42,7 +42,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'bundle.v3.css',
+      filename: 'bundle.v4.css',
     }),
   ],
 };

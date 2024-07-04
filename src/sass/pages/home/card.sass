@@ -1,7 +1,9 @@
 .outerCard
   display: grid
-  grid-template-columns: repeat(3, 1fr)
-  grid-gap: 1.6rem
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 1.1rem
+  @media screen and (max-width: 1440px)
+    grid-template-columns: repeat(3, 1fr)
   @media screen and (max-width: 1240px)
     grid-template-columns: repeat(2, 1fr)
   @media screen and (max-width: 660px)
@@ -81,24 +83,23 @@
       font-weight: 700
       border-radius: 5px
   img, picture
-    height: 19rem
+    height: 16rem
 
 .sponsor2Img
   height: 4.5rem !important
 
 .card
-  padding: 0.9rem
-  height: 20.5rem
+  padding: 0.8rem
+  height: 18.6rem
   display: flex
   flex-direction: column
   justify-content: space-between
-  border-radius: 2rem
+  border-radius: 1.8rem
   border: 3px solid hsla(0, 0%, 97%, 1)
   position: relative
   overflow: hidden
   cursor: pointer
   z-index: 2
-  // margin-bottom: 1.6rem
   transition: all 0.2s
   @media screen and (max-width: 768px)
     height: 20rem
@@ -111,7 +112,7 @@
     left: 0%
     z-index: 0
   h4
-    font-size: 2.1rem
+    font-size: 2rem
     padding: 1.2rem
     color: #ffffff
     text-shadow: 1px 1px 0 rgba(0,0,0,0.35)
@@ -140,13 +141,12 @@
         margin-left: 0.7rem
         font-weight: 500
     &-tag
-      padding: 0.8rem 1.8rem
+      padding: 0.7rem 1.5rem
       display: flex
       justify-content: center
       font-size: 1.25rem
       font-weight: 500
       border-radius: 100px
-      // border: 2px solid #f7f7f7
 
 // for both post card and home card
 

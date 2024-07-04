@@ -13,7 +13,7 @@ router.get('*', checkUser);
 router.get("/", mainController.home);
 router.get("/api/getcontent", mainController.getcontent);
 router.get("/api/getpCard", mainController.getpCard);
-router.get("/api/postideas", mainController.postideas);
+router.get("/api/postideas8", mainController.postideas8);
 router.get("/api/lazy/:page/:filterParam", mainController.lazy);
 
 // Newsletter

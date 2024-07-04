@@ -9,7 +9,7 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    link(rel='stylesheet', href='/dist/bundle.v5.css')
+    link(rel='stylesheet', href='/dist/bundle.v6.css')
     link(rel='icon', type='image/png', sizes='32x32', href='https://s3.amazonaws.com/harrydry/gdmarketing/meFav.png')
     meta(name='twitter:site', content='@harrydry')
     meta(property='og:site_name', content='Marketing Examples')
@@ -39,12 +39,12 @@ html(lang='en')
           +pCard(card)
           .content
             block content
-            .undera
-              .undera__center
-                .undera__center-text Share on
-                a.undera__center-twitter(href=`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}` target="_blank")!=icon("facebook")
-                a.undera__center-twitter(href=`https://twitter.com/intent/tweet?url=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}&via=GoodMarketingHQ%20&text=${encodeURI(card.title)}` target="_blank")!=icon("twitter")
-                a.undera__center-twitter(href=`https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}` target="_blank")!=icon("linkedin")
+            //- .undera
+            //-   .undera__center
+            //-     .undera__center-text Share on
+            //-     a.undera__center-twitter(href=`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}` target="_blank")!=icon("facebook")
+            //-     a.undera__center-twitter(href=`https://twitter.com/intent/tweet?url=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}&via=GoodMarketingHQ%20&text=${encodeURI(card.title)}` target="_blank")!=icon("twitter")
+            //-     a.undera__center-twitter(href=`https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmarketingexamples.com/${card.tBack}/${card.slug}` target="_blank")!=icon("linkedin")
       +home(cards, activeFilters)
       +mail(subscribePage)
       .home__outer-side.fed__outer-side-right

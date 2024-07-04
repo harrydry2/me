@@ -102,6 +102,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://marketingexamples.com/content/doac</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marketingexamples.com/content/pizza-influencer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 <!-- seo -->
   <url>
     <loc>https://marketingexamples.com/seo/unsplash</loc>
@@ -229,6 +239,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://marketingexamples.com/sales/dream-100</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 <!-- social -->
   <url>
     <loc>https://marketingexamples.com/social/lil-nas-x</loc>
@@ -315,6 +330,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://marketingexamples.com/social/zero-click</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marketingexamples.com/social/innocent</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 <!-- ads -->
   <url>
     <loc>https://marketingexamples.com/ads/creative-google-ad</loc>
@@ -371,6 +396,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://marketingexamples.com/ads/do-great-work</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 <!-- copywriting -->
   <url>
     <loc>https://marketingexamples.com/copywriting/tips</loc>
@@ -419,6 +449,21 @@
   </url>
   <url>
     <loc>https://marketingexamples.com/copywriting/sky-bet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marketingexamples.com/copywriting/feastables</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marketingexamples.com/copywriting/promise</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marketingexamples.com/copywriting/bou</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -500,6 +545,11 @@
   </url>
   <url>
     <loc>https://marketingexamples.com/landing-page/press-b</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marketingexamples.com/landing-page/cta-warmth</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -620,6 +670,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://marketingexamples.com/brand/ag1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 <!-- referral -->
   <url>
     <loc>https://marketingexamples.com/referral/word-of-mouth</loc>
@@ -661,7 +716,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://marketingexamples.com/referral/the-swirl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 <!-- creative -->
   <url>
     <loc>https://marketingexamples.com/creative/stevenage-challenge</loc>
@@ -730,6 +789,11 @@
   </url>
   <url>
     <loc>https://marketingexamples.com/creative/ketones</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://marketingexamples.com/creative/typo-domains</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

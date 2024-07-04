@@ -128,7 +128,7 @@ exports.getpCard = async (req, res) => {
   res.render(`./backend/posts/pCard`, { card });
 };
 
-exports.postideas = async (req, res) => {
+exports.postideas8 = async (req, res) => {
   await Cards.deleteMany({});
   await Cards.insertMany(dbCards);
   const cards = await Cards.find();

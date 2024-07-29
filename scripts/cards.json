@@ -1,6 +1,54 @@
 [
   {
     "num": "9",
+    "title": "Lizzy's email worked on me",
+    "sUrl": "",
+    "sText": "1 min",
+    "tFront": "Sales",
+    "tBack": "sales",
+    "slug": "lizzy",
+    "img": "lizzy2",
+    "imgType": "jpg",
+    "desc": "I got 97 cold emails last month. The only one I replied to didn't ask me to."
+  },
+  {
+    "num": "9",
+    "title": "The saleswoman closing 33% of cold pitches",
+    "sUrl": "",
+    "sText": "2 min",
+    "tFront": "Sales",
+    "tBack": "sales",
+    "slug": "lera",
+    "img": "lera",
+    "imgType": "jpg",
+    "desc": "“How many people are trying to reach the prospect exactly the same way as me?” The lower the number the better chance you’ve got."
+  },
+  {
+    "num": "9",
+    "title": "Don't write “labels”...",
+    "sUrl": "",
+    "sText": "30 secs",
+    "tFront": "Landing Page",
+    "tBack": "landing-page",
+    "slug": "labels",
+    "img": "labels2",
+    "imgType": "jpg",
+    "desc": "Don't write “labels”. Give me something tangible."
+  },
+  {
+    "num": "9",
+    "title": "“How can I do the ad without any adjectives?”",
+    "sUrl": "",
+    "sText": "30 secs",
+    "tFront": "Copywriting",
+    "tBack": "copywriting",
+    "slug": "adjectives",
+    "img": "adjectives2",
+    "imgType": "jpg",
+    "desc": "Start there. Adjectives are okay. Just *ideas* don't start with them."
+  },
+  {
+    "num": "9",
     "title": "Two million clicks from one email",
     "sUrl": "",
     "sText": "1 min",

@@ -21,7 +21,7 @@ exports.post = async (req, res) => {
   if (validFilters.includes(filter)) {
     const card = await Cards.findOne({ slug });
     const page = req.params.page || 1;
-    const limit = 10;
+    const limit = 120;
     const skip = limit * page - limit;
     const cards = await Cards.find().skip(skip).limit(limit);
     res.render(`./posts/ext/${slug}`, { card, cards });

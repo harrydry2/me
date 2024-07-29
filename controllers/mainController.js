@@ -76,7 +76,7 @@ exports.lazy = async (req, res) => {
   let cards;
   const { page } = req.params || 1;
   const { filterParam } = req.params;
-  const limit = 100;
+  const limit = 120;
   const skip = limit * page - limit;
   if (filterParam === "all") {
     cards = await Cards.find().skip(skip).limit(limit);
@@ -147,7 +147,7 @@ exports.filters = async (req, res) => {
   if (validFilters.includes(filters)) {
     const activeFilters = [filters];
     const page = req.params.page || 1;
-    const limit = 100;
+    const limit = 120;
     const skip = limit * page - limit;
     const cards = await Cards.find({ tBack: { $in: activeFilters } })
       .skip(skip)

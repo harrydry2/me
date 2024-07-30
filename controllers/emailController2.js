@@ -61,7 +61,7 @@ exports.subscribe = async (req, res) => {
 exports.subscribePage = async (req, res) => {
   // get skip + limit
   const page = +req.params.page || 1;
-  const limit = 10;
+  const limit = 120;
   const skip = limit * page - limit;
   const cards = await Cards.find().skip(skip).limit(limit);
   res.render("./home/extSubscribe", {

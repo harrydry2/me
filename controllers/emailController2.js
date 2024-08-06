@@ -30,12 +30,18 @@ async function tryAndPostToNewsletter(email, res) {
 
 exports.subscribe = async (req, res) => {
   const { email } = req.body;
+  if (!email) {
+    return res.status(400).json({ error: "Email is required" });
+  }
   try {
     const prePost = await axios.get(
       `https://api.convertkit.com/v3/subscribers?api_secret=${process.env.CKAPIS}&email_address=${email}`
     );
     if (prePost.data.total_subscribers === 1) {
       const subid = prePost.data.subscribers[0].id;
+      if (!subid || typeof subid !== 'string') {
+        return res.status(500).json({ error: "Invalid subscriber ID received" });
+      }
       try {
         const prePost2 = await axios.get(
           `https://api.convertkit.com/v3/subscribers/${subid}/tags?api_key=${process.env.CKAPI}`
@@ -48,13 +54,15 @@ exports.subscribe = async (req, res) => {
           tryAndPostToNewsletter(email, res);
         }
       } catch (err) {
-        console.log(err);
+        console.error('Error fetching subscriber tags:', err);
+        res.status(500).json({ error: "Error fetching subscriber tags" });
       }
     } else {
       tryAndPostToNewsletter(email, res);
     }
   } catch (err) {
-    console.log(err);
+    console.error('Error fetching subscriber details:', err);
+    res.status(500).json({ error: "Error fetching subscriber details" });
   }
 };
 

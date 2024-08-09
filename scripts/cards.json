@@ -1,18 +1,6 @@
 [
   {
     "num": "9",
-    "title": "Lizzy's email worked on me",
-    "sUrl": "",
-    "sText": "1 min",
-    "tFront": "Sales",
-    "tBack": "sales",
-    "slug": "lizzy",
-    "img": "lizzy2",
-    "imgType": "jpg",
-    "desc": "I got 97 cold emails last month. The only one I replied to didn't ask me to."
-  },
-  {
-    "num": "9",
     "title": "The saleswoman closing 33% of cold pitches",
     "sUrl": "",
     "sText": "2 min",
@@ -22,6 +10,18 @@
     "img": "lera",
     "imgType": "jpg",
     "desc": "“How many people are trying to reach the prospect exactly the same way as me?” The lower the number the better chance you’ve got."
+  },
+  {
+    "num": "9",
+    "title": "Lizzy's email worked on me",
+    "sUrl": "",
+    "sText": "1 min",
+    "tFront": "Sales",
+    "tBack": "sales",
+    "slug": "lizzy",
+    "img": "lizzy2",
+    "imgType": "jpg",
+    "desc": "I got 97 cold emails last month. The only one I replied to didn't ask me to."
   },
   {
     "num": "9",

@@ -36,9 +36,9 @@ mixin home(cards, title, activeFilters, filters, titlenum, displaynone = "")
             .nh1.cmtGlitch Yes Please :)
           .nh3
         .ceTop__right
-          //- .ceTop__right-surgery
-          //-   a(href="/roast" target="_blank").ceTop__right-sign.dropout3 “Roast My Homepage”
-          //-   img(src="https://ik.imagekit.io/o08ysq9vx/roast/new.svg", alt="")
+          .ceTop__right-surgery
+            a(href="/roast" target="_blank").ceTop__right-sign.dropout3 “Roast My Homepage”
+            img(src="https://ik.imagekit.io/o08ysq9vx/roast/new.svg", alt="")
           a(href="/inspiration").ceTop__right-sign.dropout3 Copywriting Examples
           a(href="https://www.instagram.com/marketing_examples" target="_blank" class="dropout1")!=icon("instagram")
           a(href="https://www.linkedin.com/in/harrydry/" target="_blank" class="dropout1")!=icon("linu")
@@ -46,8 +46,10 @@ mixin home(cards, title, activeFilters, filters, titlenum, displaynone = "")
       .outerCard
         .sponsor.sponsor1
           .sponsor__inner
-            a(href="https://www.youtube.com/watch?v=TUMjnmfsPeM" target="_blank")
-              img(src="https://ik.imagekit.io/o08ysq9vx/roast/fcc.jpg", alt="Learn Copywriting — Harry Dry")
+            //- a(href="https://www.youtube.com/watch?v=TUMjnmfsPeM" target="_blank")
+            //-   img(src="https://ik.imagekit.io/o08ysq9vx/roast/fcc.jpg", alt="Learn Copywriting — Harry Dry")
+            a(href="/roast" target="_blank")
+              img(src="https://ik.imagekit.io/o08ysq9vx/roast/rmh.jpg", alt="Learn Copywriting — Harry Dry")
         //- .sponsor.sponsor2
         //-   .sponsor__inner
         //-     a(href="https://www.altalogy.com/?utm_campaign=hdsponsorship&utm_medium=newsletter&utm_source=marketingexamples" target="_blank")

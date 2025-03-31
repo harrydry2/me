@@ -25,6 +25,7 @@ router.post("/api/subscribe", emailController2.subscribe);
 router.get("/course9", courseController.course9);
 router.get("/createcheckout", courseController.createCheckout);
 router.use("/justboughtthecourse", courseController.justbought);
+router.get("/course10", courseController.course10);
 router.get("/course10", requireAuth, courseController.course10);
 router.get("/course10/:slug", requireAuth, courseController.coursePage);
 router.post("/api/vidended", checkUser, courseController.vidended);

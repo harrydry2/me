@@ -54,6 +54,7 @@ export function vimeoWatcher() {
   player.on("ended", async function () {
     // countdown
     const isthebarStuck = $('.zzz__bar-progress-width').dataset.barStuck;
+    console.log(isthebarStuck, "1st Console Log");
     adjustDashes(isthebarStuck);
     const countdownElement = $('.zzz__right-cont-split-end-countdown');
     var slug = window.location.pathname.split("/").pop();
@@ -79,7 +80,7 @@ export function adjustDashes(isthebarStuck = "true") {
   const dashedLine = $('.zzz__bar-dashed');
   const progressWriter = $('.zzz__bar-writer');
 
-  console.log(isthebarStuck, "barstuckfrontend");
+  console.log(isthebarStuck, "2nd Console Log");
   const totalVids = 100;
   var completedVids = isthebarStuck === "true" ? parseInt(progressWidth.dataset.completedVids) : parseInt(progressWidth.dataset.completedVids) + 1;
   const completionPercentage = (completedVids / totalVids) * 100;

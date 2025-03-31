@@ -21,7 +21,7 @@ import {
   actualPopup,
   mailSubmitFromPost,
   mailSubmitFromCourseNew,
-  mailSubmitHome,
+  // mailSubmitHome,
   mailSubmitFromHandbook,
 } from "./modules/mailPopup";
 
@@ -173,7 +173,7 @@ if (
   } else {
     console.log("no more emails popups for loving subs");
   }
-  mailSubmitHome();
+  // mailSubmitHome();
 }
 //
 

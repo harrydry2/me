@@ -29,13 +29,13 @@ mixin home(cards, title, activeFilters, filters, titlenum, displaynone = "")
         .ceTop__left
           //- img(src="https://ik.imagekit.io/o08ysq9vx/lc/topbar4.svg" alt="Logo" class="topbar")
           //- Comment this out
-          //- .ceTop-mail
-          //-   .ceTop-mail-left
-          //-     .ceTop-mail-left-icon!=icon("mail")
-          //-     input(type="text" placeholder="Get 6 new tips in your inbox every Monday").nh2
-          //-     input(autocomplete='off' type='text' name='name' placeholder='Your name here' tabindex="-1").nottoday.nh4
-          //-   .nh1.cmtGlitch Yes Please :)
-          //- .nh3
+          .ceTop-mail
+            .ceTop-mail-left
+              .ceTop-mail-left-icon!=icon("mail")
+              input(type="text" placeholder="Get 6 new tips in your inbox every Monday").nh2
+              input(autocomplete='off' type='text' name='name' placeholder='Your name here' tabindex="-1").nottoday.nh4
+            .nh1.cmtGlitch Yes Please :)
+          .nh3
         .ceTop__right
           //- .ceTop__right-surgery
           //-   a(href="/roast" target="_blank").ceTop__right-sign.dropout3 “Roast My Homepage”

@@ -51,7 +51,7 @@ function submitMail(button, red, input, num, honeyPot) {
       }
       if (data.email === "true") {
         red.style.color = "#00c26e";
-        red.innerText = `Confirmation sent — Check your inbox :)`;
+        red.innerText = `Double opt in required — Check your inbox :)`;
         if (numm === 1) {
           red.classList.add("gta__1");
         } else if (numm === 2) {

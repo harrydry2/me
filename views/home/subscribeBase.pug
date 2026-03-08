@@ -27,4 +27,9 @@ html(lang='en')
     body
       block content
   block scripts
+    if turnstileSiteKey
+      link(rel='preconnect' href='https://challenges.cloudflare.com')
+      script(src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit')
+      script.
+        window.__turnstileSiteKey = !{JSON.stringify(turnstileSiteKey)};
     script(src="/dist/bundle5.js")

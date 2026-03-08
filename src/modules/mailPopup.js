@@ -3,6 +3,10 @@ import axios from "axios";
 import { differenceInHours } from "date-fns";
 import { $, $$ } from "./bling";
 
+// Bot protection: block submissions within 2.5s of page load (script runs on load)
+const MIN_SUBMIT_DELAY_MS = 2000;
+const PAGE_LOAD_TIME = Date.now();
+
 // mail
 
 function validateEmail(email) {
@@ -18,8 +22,14 @@ export function actualPopup() {
   }
 }
 
+// Honeypot: hidden field that bots fill, humans leave empty. Send to server so API can reject too.
+function getHoneypotValue(honeyPot) {
+  if (!honeyPot || typeof honeyPot.value !== "string") return "";
+  return honeyPot.value.trim();
+}
+
 function submitMail(button, red, input, num, honeyPot) {
-  console.log(window.SL, "is this a thing?");
+  if (!button || !red || !input) return;
   var numm = num;
   button.on("click", async () => {
     if (
@@ -28,30 +38,43 @@ function submitMail(button, red, input, num, honeyPot) {
     ) {
       numm = 5;
     }
-    if (honeyPot.value) {
-      console.log("HONEY ERROR");
-      return;
+    const hp = getHoneypotValue(honeyPot);
+    if (hp) {
+      return; // Bot: silent reject, no feedback
+    }
+    if (Date.now() - PAGE_LOAD_TIME < MIN_SUBMIT_DELAY_MS) {
+      return; // Too fast: silent reject (likely bot)
     }
     red.style.display = "block";
     if (validateEmail(input.value)) {
+      const body = { email: input.value, website: getHoneypotValue(honeyPot) };
+      if (window.__turnstileWidgetId && !window.__turnstileFailed && typeof window.turnstile !== "undefined") {
+        const token = window.turnstile.getResponse(window.__turnstileWidgetId);
+        if (!token) {
+          red.style.color = "#D0021B";
+          red.innerText = "Please wait a moment and try again.";
+          return;
+        }
+        body["cf-turnstile-response"] = token;
+      }
       if (typeof window.SL !== "undefined") {
         SL.trackSubscriber(input.value);
-        console.log(SL, input.value);
       }
       window.localStorage.setItem("onEmailList", "true");
       if (numm === 7) {
-        var { data } = await axios.post("/api/subscribeCourse", {
-          email: input.value,
-        });
+        var { data } = await axios.post("/api/subscribeCourse", body);
       } else {
         var { data } = await axios.post("/api/subscribe", {
-          email: input.value,
+          ...body,
           num: numm,
         });
       }
+      if (window.__turnstileWidgetId && !window.__turnstileFailed && window.turnstile) {
+        window.turnstile.reset(window.__turnstileWidgetId);
+      }
       if (data.email === "true") {
         red.style.color = "#00c26e";
-        red.innerText = `Double opt in required — Check your inbox :)`;
+        red.innerText = `Double opt in required — Check your inbox (may take 2 mins) :)`;
         if (numm === 1) {
           red.classList.add("gta__1");
         } else if (numm === 2) {
@@ -121,6 +144,32 @@ export function mailPopup() {
     }
   }
 
+  if ($(".outerMailActive") && $("#turnstile-newsletter") && window.__turnstileSiteKey) {
+    function initTurnstile() {
+      if (typeof window.turnstile === "undefined") {
+        setTimeout(initTurnstile, 50);
+        return;
+      }
+      window.turnstile.ready(() => {
+        window.__turnstileWidgetId = window.turnstile.render("#turnstile-newsletter", {
+          sitekey: window.__turnstileSiteKey,
+          size: "invisible",
+          callback: () => {
+            const btn = document.querySelector(".outerMailActive .newmail__input-input-button");
+            if (btn) btn.removeAttribute("disabled");
+          },
+          "error-callback": () => {
+            // e.g. 110200 = domain not in Cloudflare widget hostnames – enable button so form still works
+            window.__turnstileFailed = true;
+            const btn = document.querySelector(".outerMailActive .newmail__input-input-button");
+            if (btn) btn.removeAttribute("disabled");
+          },
+        });
+      });
+    }
+    initTurnstile();
+  }
+
   mailClose.on("click", () => {
     window.localStorage.setItem("lsmail", new Date());
     outerMail.style.display = "none";
@@ -143,7 +192,7 @@ export function mailSubmitHome() {
   const mailInputSpec = $(".nh2");
   const mailRedSpec = $(".nh3");
   const honeyPot = $(".nh4");
-  // honeyPot check
+  if (!mailButtonSpec || !mailInputSpec || !mailRedSpec) return;
   submitMail(mailButtonSpec, mailRedSpec, mailInputSpec, 1, honeyPot);
 }
 

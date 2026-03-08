@@ -29,9 +29,34 @@ async function tryAndPostToNewsletter(email, res) {
 // regular
 
 exports.subscribe = async (req, res) => {
-  const { email } = req.body;
+  const { email, website } = req.body;
   if (!email) {
     return res.status(400).json({ error: "Email is required" });
+  }
+  // Honeypot: bots often fill hidden "website" field. Reject silently (return success so they don't retry).
+  if (website && String(website).trim() !== "") {
+    return res.json({ email: "true" });
+  }
+  // Turnstile (newsletter page): when token is sent, verify it
+  const turnstileToken = req.body["cf-turnstile-response"];
+  if (turnstileToken && process.env.TURNSTILE_SECRET) {
+    try {
+      const verifyRes = await axios.post(
+        "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+        {
+          secret: process.env.TURNSTILE_SECRET,
+          response: turnstileToken,
+          remoteip: req.ip || req.connection?.remoteAddress,
+        },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      if (!verifyRes.data?.success) {
+        return res.status(400).json({ email: "dunno" });
+      }
+    } catch (err) {
+      console.error("Turnstile verify error:", err);
+      return res.status(400).json({ email: "dunno" });
+    }
   }
   try {
     const prePost = await axios.get(
@@ -75,5 +100,6 @@ exports.subscribePage = async (req, res) => {
   res.render("./home/extSubscribe", {
     cards,
     subscribePage: "outerMailActive",
+    turnstileSiteKey: process.env.TURNSTILE_SITEKEY || "",
   });
 };

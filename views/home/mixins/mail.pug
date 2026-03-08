@@ -3,7 +3,7 @@ mixin tick(text)
     .tick__icon!=icon("check")
     .tick__text=text
 
-mixin mail(subscribePage)
+mixin mail(subscribePage, useTurnstile = false)
   .outerMail(class=`${subscribePage}`)
     .newmail
       .newmail__topLayer
@@ -33,8 +33,10 @@ mixin mail(subscribePage)
       .newmail__input
         .newmail__input-input
           input(placeholder="Your email")
-          input(autocomplete='off' type='text' name='name' placeholder='Your name here' tabindex="-1").nottoday.nhMailPopup
-          .newmail__input-input-button Try it
+          input(autocomplete='off' type='text' name='website' placeholder='' tabindex='-1' aria-hidden='true').nottoday.nhMailPopup
+          if useTurnstile
+            #turnstile-newsletter(aria-hidden='true' style='position:absolute;left:-9999px;width:1px;height:1px;')
+          button.newmail__input-input-button(type='button' disabled=useTurnstile) Try it
         .newmail__input-red
       .newmail__test
         .testy.testy1
